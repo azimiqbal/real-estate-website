@@ -72,6 +72,7 @@ import Footer from '../components/Footer.astro';
 		max-width: calc(100% - 2rem);
 		color: white;
 		font-size: 20px;
+        font-family:'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 	}
 
     h4 {
@@ -81,6 +82,7 @@ import Footer from '../components/Footer.astro';
 		text-align: left;
         margin: 2.7em 0 0.5em 0;
         color: black;
+        text-align: center;
 	}
 
     p {
@@ -95,16 +97,14 @@ import Footer from '../components/Footer.astro';
 		gap: 3rem;
 		padding: 0;
 	}
-
     :root {
-		--accent: 136, 58, 234;
-		--accent-light: 224, 204, 250;
-		--accent-dark: 49, 10, 101;
-		--accent-gradient: linear-gradient(
-			45deg,
-			rgb(var(--accent)),
-			rgb(var(--accent-light)) 30%,
-			white 60%
-		);
-	}
+    --accent: 0, 128, 128; /* Dark Cyan */
+    --accent-dark: 0, 64, 64; /* Darker Cyan */
+    --accent-gradient: linear-gradient(
+        45deg,
+        rgb(var(--accent)),
+        rgb(var(--accent-dark)) 30%,
+        white 60%
+    );
+}
 </style>
