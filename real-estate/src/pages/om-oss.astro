@@ -2,21 +2,115 @@
 import Layout from '../layouts/Layout.astro';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
+import CardImage from '../components/CardImage.astro';
 ---
 
 <Layout title="NT Bolig - Om oss">
-	<main>
-		<Header backgroundColor="rgba(52, 56, 65, 1)"/>
-	</main>
-	<Footer/>
+    <Header backgroundColor="rgba(52, 56, 65, 1)"/>
+    <main>
+        <div class="about-me">
+            <h2>Hvem er NT Bolig?</h2>
+            <p>
+                I NT Bolig etterlever vi våre grunnleggende verdier som er å være ærlig, bry oss, ha vilje og lyst og være nytenkende i vår tilnærming til kunden og bruk av teknologi.
+            </p>
+            <p></p>
+            <p>
+                <strong>Ny spiller</strong>
+            </p>
+            <p>
+                Vi er en ny og moderne eiendomsmeglerkjede som har som mål å gjøre bolighandelen enklere og mer effektiv for deg som kunde. Vi har fokus på å levere høy kvalitet i alle ledd, og vi er opptatt av å gi deg som kunde en trygg og god opplevelse.
+            </p>
+			<h2>Våre tjenester</h2>
+			<ul>
+				<li>Salg av huselementer</li>
+				<li>Arkitektbistand</li>
+				<li>Prosjekteringstjenester</li>
+				<li>Bygge og prosjektledelse</li>
+				<li>Byggesaker og behandlingshjelp</li>
+				<li>Montering, graving og elektrisk arbeid</li>
+			</ul>
+        </div>
+		<h2>Møt teamet</h2>
+		<ul role="list" class="link-card-grid">
+		<CardImage
+			url="../../public/vvd.webp"
+			title="Virgil Van dijk"
+			body="Daglig leder i NT Bolig"
+		/>
+		<CardImage
+			url="../../public/7-0.jpeg"
+			title="Mohamed Salah"
+			body="CTO i NT Bolig"
+		/>
+		<CardImage
+			url="../../public/salah.jpeg"
+			title="Mohamed Salah"
+			body="Owner of Manchester United FC"
+		/>
+		<CardImage
+		url="../../public/klopp.jpg"
+		title="Jurgen Klopp"
+		body="CEO of NT Bolig"
+	/>
+		</ul>
+    </main>
+    <Footer/>
 </Layout>
 
 <style>
-	:global(body) {
-		background-color: whitesmoke;
+    :global(body) {
+        background-color: whitesmoke;
+    }
+
+    main {
+        font-size: 22px;
+        padding-top: 4rem;
+        justify-content: center;
+        margin: auto;
+		width: 800px;
+		max-width: calc(100% - 2rem);
+		font-size: 20px;
+    }
+
+    .about-me {
+		justify-content: center;
+		align-items: center;
+        max-width: 800px;
+        padding: 0 20px;
+    }
+
+    h2 {
+        font-weight: 600;
+        font-size: 22px;
+        line-height: 32px;
+        margin-bottom: 1rem;
+    }
+
+    p {
+        font-size: 18px;
+        line-height: 28px;
+		font-family: "ModernEra";
+    	color: #292823;
+
+    }
+
+	li {
+		font-size: 18px;
+		line-height: 28px;
+		font-family: "ModernEra";
 	}
-	main {
-		font-size: 22px;
-		height: 100vh;
+
+	strong {
+		font-weight: 600;
 	}
+
+	.link-card-grid {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(24ch, 1fr));
+		gap: 3rem;
+		padding: 0;
+	}
+
 </style>
+
+

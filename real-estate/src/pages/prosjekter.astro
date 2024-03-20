@@ -6,10 +6,10 @@ import Footer from '../components/Footer.astro';
 ---
 
 <Layout title="NT Bolig - Om oss">
+    <Header backgroundColor="rgba(52, 56, 65, 1)"/>
 	<main>
-            <Header backgroundColor="rgba(52, 56, 65, 1)"/>
-            <h1>Referanser</h1>
-            <h4>Les mer om våre referanser. Her finner du informasjon om ulike prosjekter vi har gjennomført, hvor vi har bistått med alt fra salg av huselementer til eiendomsutvikling</h2>
+            <h4>Referanser</h4>
+            <p>Les mer om våre referanser. Her finner du informasjon om ulike prosjekter vi har gjennomført, hvor vi har bistått med alt fra salg av huselementer til eiendomsutvikling</p>
             <ul role="list" class="link-card-grid">
                 <Card
                 href="/referanse-snaroya"
@@ -32,8 +32,8 @@ import Footer from '../components/Footer.astro';
                 body="What if I told you that these nuts are the best nuts? 🥜"
             />
         </ul>
-            <h1>Prosjekter</h1>
-            <h4>Ulike prosjekter som er under utvikling. Her jobber vi med arkitektbistand, leveranse av huselementer og masse mer.</h2>
+            <h4>Prosjekter</h4>
+            <p>Ulike prosjekter som er under utvikling. Her jobber vi med arkitektbistand, leveranse av huselementer og masse mer.</p>
             <ul role="list" class="link-card-grid">
                 <Card
                 href=""
@@ -74,18 +74,18 @@ import Footer from '../components/Footer.astro';
 		font-size: 20px;
 	}
 
-    h1 {
-		font-size: 3rem;
-		font-weight: 500;
+    h4 {
+		font-size: 1.5rem;
+        font-weight: 500;
 		line-height: 1;
-		text-align: center;
-        margin: 1.4em 0 0.5em 0;
+		text-align: left;
+        margin: 2.7em 0 0.5em 0;
         color: black;
 	}
 
-    h4 {
-        color: black;
-        text-align: center;
+    p {
+        color: rgb(41, 40, 35);
+        text-align: left;
         font-weight: 300;
     }
 

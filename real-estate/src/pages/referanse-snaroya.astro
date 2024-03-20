@@ -9,6 +9,7 @@ import Footer from '../components/Footer.astro';
 		<Header backgroundColor="rgba(52, 56, 65, 1)"/>
         <div class="slider-container">
             <h2>Snarøya på sitt beste</h2>
+            <div class="address">Adresse: Etterstadsletta 27A, 0660 Oslo</div>
             <p>Ta en titt på resultatet av vårt arbeid på denne eneboligen på Snarøya. Her har vi...</p>
             <div class="slider">
                 <img src="../../public/snaroya1.jpg" alt="Image 1">
@@ -32,6 +33,10 @@ import Footer from '../components/Footer.astro';
         font-size: 22px;
         flex-grow: 1;
         min-height: 100vh;
+    }
+
+    .address {
+        font-size: 0.8em;
     }
 
 	h2 {
