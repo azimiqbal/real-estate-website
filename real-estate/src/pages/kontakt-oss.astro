@@ -1,0 +1,95 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+---
+
+<Layout title="NT Bolig - Kontakt oss">
+	<main>
+		<Header backgroundColor="rgba(52, 56, 65, 1)"/>
+		<section class="contact-section">
+			<h1>Kontakt oss</h1>
+			<p>Har du noen spørsmål eller andre henvendelser? Terskelen er lav, vennligst ta kontakt med oss på mail eller telefon</p>
+			<div class="contact-info">
+				<div class="contact-info-item">
+					<h2>Email oss</h2>
+					<div class="contact-details">
+						<img src="../../public/email.svg" alt="Email Icon" class="icon">
+						<p>Email: example@example.com</p>
+					</div>
+				</div>
+				<div class="contact-info-item">
+					<h2>Ta kontakt på telefon</h2>
+					<div class="contact-details">
+						<img src="../../public/phone.svg" alt="Phone Icon" class="icon">
+						<p>Telefon: +12345678</p>
+					</div>
+				</div>
+			</div>
+		</section>
+	</main>
+   <Footer/>
+</Layout>
+
+<style>
+	:global(body) {
+		background-color: whitesmoke;
+	}
+	main {
+		font-size: 22px;
+		display: flex;
+		justify-content: center;
+		align-items: flex-start;
+		min-height: 90vh;
+	}
+
+	.contact-section {
+		width: 700px;
+		max-width: calc(100% - 2rem);
+		margin: 1.8em 0 0 0;
+	}
+
+	h1 {
+		font-size: 3rem;
+		font-weight: 700;
+	}
+
+	.contact-info {
+		display: flex;
+	}
+
+	.contact-info-item {
+		width: calc(50% - 10px);
+	}
+
+	.contact-details {
+		display: flex;
+		align-items: center;
+	}
+
+	.icon {
+		width: 24px;
+		height: 24px;
+		margin-right: 8px;
+	}
+
+	h2 {
+		font-size: 1.5rem;
+		color: #333;
+	}
+
+	p {
+		font-size: 1.1rem;
+		color: #666;
+	}
+	
+	@media (max-width: 768px) {
+		.contact-info {
+			flex-direction: column;
+		}
+
+		.contact-info-item {
+			width: 100%;
+		}
+	}
+</style>

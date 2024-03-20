@@ -1,27 +1,22 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
 ---
 
 <Layout title="NT Bolig - Om oss">
 	<main>
-		<div class="ok">
-			<Header />
-		</div>
+		<Header backgroundColor="rgba(52, 56, 65, 1)"/>
 	</main>
+	<Footer/>
 </Layout>
 
 <style>
-	main {
-		color: darkolivegreen;
-		font-size: 22px;
-		height: 95vh;
-		font-family: serif;
+	:global(body) {
+		background-color: whitesmoke;
 	}
-
-	.ok {
-		position: relative;
-		width: 100%;
-		height: 100%;
+	main {
+		font-size: 22px;
+		height: 100vh;
 	}
 </style>

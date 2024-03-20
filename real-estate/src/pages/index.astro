@@ -1,6 +1,7 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
 ---
 
 <Layout title="NT Bolig - Salg av huselementer">
@@ -21,9 +22,14 @@ import Header from '../components/Header.astro';
 			</div>
 		</div>
 	</main>
+	<Footer/>
 </Layout>
 
 <style>
+
+	:global(body) {
+		background-color: whitesmoke;
+    }
 	body, html {
     	overflow-x: hidden;
   	}

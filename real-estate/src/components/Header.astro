@@ -1,16 +1,24 @@
-<header class="header">
+---
+
+type Props = {
+  backgroundColor?: string;
+};
+
+const { backgroundColor } = Astro.props as Props;
+---
+<header class="header" style={`background-color: ${backgroundColor};`}>
   <div class="logo">
     <a href="/">
       <div class="logo-container">
-        <img class="logos" src="./huh.png" alt="NT Bolig">
+        <img class="logos" src="../../public/huh.png" alt="NT Bolig">
         <span>NT Bolig</span>
       </div>
     </a>    
   </div>
   <nav class="site-navigation">
     <ul class="nav">
-      <li><a href="/tjenester/">Tjenester</a></li> 
-      <li><a href="/about/">Om oss</a></li> 
+      <li><a href="/prosjekter/">Prosjekter</a></li> 
+      <li><a href="/om-oss/">Om oss</a></li> 
       <li><a href="/kontakt-oss/">Kontakt oss</a></li> 
     </ul>
   </nav>
@@ -21,8 +29,8 @@
   </div>
   <div class="mobile-nav">
     <ul class="nav">
-      <li><a href="/tjenester/">Tjenester</a></li> 
-      <li><a href="/about/">Om oss</a></li> 
+      <li><a href="/prosjekter/">Prosjekter</a></li> 
+      <li><a href="/om-oss/">Om oss</a></li> 
       <li><a href="/kontakt-oss/">Kontakt oss</a></li> 
     </ul>
   </div>
@@ -47,7 +55,7 @@
     justify-content: space-evenly;
     align-items: center;
     z-index: 1000;
-    border-bottom: 1px solid gray;
+    border-bottom: 1px solid rgb(199, 193, 193);
   }
   
   .logo-container {
@@ -93,6 +101,11 @@
   .site-navigation li {
     margin: 0 12px 0 12px;
     transition: transform 0.3s ease;
+  }
+
+  .nav li:not(:last-child) {
+    border-right: 1px solid gray;
+    padding-right: 15px;
   }
 
   .site-navigation a {
