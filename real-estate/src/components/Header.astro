@@ -1,4 +1,6 @@
 ---
+import { Image } from 'astro:assets';
+import huh from '../assets/huh.png';
 
 type Props = {
   backgroundColor?: string;
@@ -10,14 +12,15 @@ const { backgroundColor } = Astro.props as Props;
   <div class="logo">
     <a href="/">
       <div class="logo-container">
-        <img class="logos" src="/huh.png" alt="NT Bolig">
+        <Image src={huh} class="logos" alt="header logo" loading="eager"/>
         <span>NT Bolig</span>
       </div>
     </a>    
   </div>
   <nav class="site-navigation">
     <ul class="nav">
-      <li><a href="/prosjekter/">Prosjekter</a></li> 
+      <li><a href="/huselementer/">Huselementer</a></li>  
+      <li><a href="/tjenester/">Våre tjenester</a></li> 
       <li><a href="/om-oss/">Om oss</a></li> 
       <li><a href="/kontakt-oss/">Kontakt oss</a></li> 
     </ul>
@@ -47,7 +50,8 @@ const { backgroundColor } = Astro.props as Props;
 
 <style>    
   .header {
-    position: absolute;
+    position: fixed;
+    background-color: rgba(52, 56, 65, 1);
     top: 0;
     left: 0;
     width: 100%;
@@ -55,7 +59,6 @@ const { backgroundColor } = Astro.props as Props;
     justify-content: space-evenly;
     align-items: center;
     z-index: 1000;
-    border-bottom: 1px solid rgb(199, 193, 193);
     font-size: 18px;
   }
   
@@ -79,8 +82,8 @@ const { backgroundColor } = Astro.props as Props;
   }
   
   .logos {
-    height: 65px;
-    width: 80px;
+    height: 75px;
+    width: 90px;
   }
 
   span {
@@ -105,15 +108,16 @@ const { backgroundColor } = Astro.props as Props;
   }
 
   .nav li:not(:last-child) {
-    border-right: 1px solid gray;
+    border-right: 1px solid white;
     padding-right: 15px;
   }
 
   .site-navigation a {
     text-decoration: none;
-    color: lightgray;
+    color: white;
     position: relative;
     overflow: hidden;
+    font-size: 20px;
   }
 
   .site-navigation a:hover {
@@ -180,7 +184,7 @@ const { backgroundColor } = Astro.props as Props;
   }
 
   .mobile-nav a:hover {
-    background-color: #f5f5f5; /* Add this line */
+    background-color: #f5f5f5;
   }
 
   .mobile-nav.active {

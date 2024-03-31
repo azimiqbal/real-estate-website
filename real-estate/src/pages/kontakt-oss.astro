@@ -2,6 +2,10 @@
 import Layout from '../layouts/Layout.astro';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
+import { Image } from 'astro:assets';
+import email from '../assets/email.svg';
+import phone from '../assets/phone.svg';
+
 ---
 
 <Layout title="NT Bolig - Kontakt oss">
@@ -14,18 +18,19 @@ import Footer from '../components/Footer.astro';
 				<div class="contact-info-item">
 					<h2>Email oss</h2>
 					<div class="contact-details">
-						<img src="/email.svg" alt="Email Icon" class="icon">
-						<p>Email: example@example.com</p>
+						<Image src={email} alt="Email Icon" class="icon" loading="eager"/>
+						<p><a href="mailto:someone@yoursite.com">example@example.com</a></p>
 					</div>
 				</div>
 				<div class="contact-info-item">
 					<h2>Ta kontakt på telefon</h2>
 					<div class="contact-details">
-						<img src="/phone.svg" alt="Phone Icon" class="icon">
-						<p>Telefon: +12345678</p>
+						<Image src={phone} alt="Phone Icon" class="icon" loading="eager"/>
+						<p>+12345678</p>
 					</div>
 				</div>
 			</div>
+			<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12749.223545884435!2d48.68947627071526!3d36.97863114689756!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x401e012600b54003%3A0xc11c01286d3eefc8!2sShit%2C%20Iran!5e0!3m2!1sno!2sno!4v1711854284186!5m2!1sno!2sno" width="400" title="adresse" height="320" style="border:0;" allowfullscreen="" loading="eager" referrerpolicy="no-referrer-when-downgrade"></iframe>
 		</section>
 	</main>
    <Footer/>
@@ -40,8 +45,9 @@ import Footer from '../components/Footer.astro';
 		display: flex;
 		justify-content: center;
 		align-items: flex-start;
-		min-height: 90vh;
+		padding: 12px;
 		font-family:'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+		min-height: 100vh;
 	}
 
 	.contact-section {
@@ -53,6 +59,7 @@ import Footer from '../components/Footer.astro';
 	h1 {
 		font-size: 3rem;
 		font-weight: 700;
+		padding-top: 8px;
 	}
 
 	.contact-info {
@@ -69,8 +76,8 @@ import Footer from '../components/Footer.astro';
 	}
 
 	.icon {
-		width: 24px;
-		height: 24px;
+		width: 26px;
+		height: 26px;
 		margin-right: 8px;
 	}
 
@@ -79,9 +86,21 @@ import Footer from '../components/Footer.astro';
 		color: #333;
 	}
 
-	p {
+	p, a {
 		font-size: 1.1rem;
 		color: #666;
+		text-decoration: none;
+		transition: color 0.2s ease;
+	}
+
+	a:hover {
+    	color: rgb(144, 134, 134);
+	}
+
+	iframe {
+		margin-top: 30px;
+		width: 100%;
+		border-radius: 10px;
 	}
 	
 	@media (max-width: 768px) {

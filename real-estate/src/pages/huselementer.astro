@@ -1,0 +1,150 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import { Image } from 'astro:assets';
+import snaroya2 from '../assets/snaroya2.jpg';
+import snaroya4 from '../assets/snaroya4.jpg';
+import snaroya5 from '../assets/snaroya5.jpg';
+import halden1 from '../assets/halden1.jpg';
+import halden2 from '../assets/halden2.jpg';
+import halden3 from '../assets/halden3.jpg';
+import halden4 from '../assets/halden4.jpg';
+import halden5 from '../assets/halden5.jpg';
+import halden6 from '../assets/halden6.jpg';
+---
+
+<Layout title="NT Bolig - Om oss">
+    <Header backgroundColor="rgba(52, 56, 65, 1)"/>
+	<main>
+            <h1>Huselementer fra NT Bolig</h1>
+            <div class="image-grid">
+                <div class="image-item">
+                    <Image src={halden1} alt="Klopp holding the trophy" loading="eager" />
+                    <div class="image-text">
+                        <h3>Lorem ipsum dolor sit amet</h3>
+                    </div>
+                </div>
+                <div class="image-item">
+                    <Image src={halden2} alt="Klopp holding the trophy" loading="eager" />
+                    <div class="image-text">
+                        <h3>Lorem ipsum dolor sit amet</h3>
+                    </div>
+                </div>
+                <div class="image-item">
+                    <Image src={halden3} alt="Klopp holding the trophy" loading="eager" />
+                    <div class="image-text">
+                        <h3>Lorem ipsum dolor sit amet</h3>
+                    </div>
+                </div>
+                <div class="image-item">
+                    <Image src={halden4} alt="Klopp holding the trophy" loading="eager" />
+                    <div class="image-text">
+                        <h3>Lorem ipsum dolor sit amet</h3>
+                    </div>
+                </div>
+                <div class="image-item">
+                    <Image src={halden5} alt="Klopp holding the trophy" loading="eager" />
+                    <div class="image-text">
+                        <h3>Lorem ipsum dolor sit amet</h3>
+                    </div>
+                </div>
+                <div class="image-item">
+                    <Image src={halden6} alt="Klopp holding the trophy" loading="eager" />
+                    <div class="image-text">
+                        <h3>Lorem ipsum dolor sit amet</h3>
+                    </div>
+                </div>
+                <div class="image-item">
+                    <Image src={snaroya2} alt="Klopp holding the trophy" loading="eager" />
+                    <div class="image-text">
+                        <h3>Lorem ipsum dolor sit amet</h3>
+                    </div>
+                </div>
+                <div class="image-item">
+                    <Image src={snaroya4} alt="Klopp holding the trophy" loading="eager" />
+                    <div class="image-text">
+                        <h3>Lorem ipsum dolor sit amet</h3>
+                    </div>
+                </div>
+                <div class="image-item">
+                    <Image src={snaroya5} alt="Klopp holding the trophy" loading="eager" />
+                    <div class="image-text">
+                        <h3>Lorem ipsum dolor sit amet</h3>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <Footer/>
+</Layout>
+
+<style>
+	main {
+        font-family:'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        background-color: whitesmoke;
+        padding: 20px;
+	}
+
+    h1 {
+        padding-top: 4.5rem;
+        text-align: center;
+        color: rgb(48, 57, 98);
+	}
+
+    p {
+        color: rgb(41, 40, 35);
+        text-align: center;
+    }
+
+    .image-grid {
+        display: grid;
+        grid-gap: 20px;
+    }
+    .image-item {
+        position: relative;
+        overflow: hidden;
+        padding-bottom: 50px;
+    }
+
+    .image-text {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background-color: rgba(245, 245, 245, 0.8);
+        padding: 6px;
+    }
+
+    .image-text h3 {
+        margin: 0 0 16px 0;
+        font-size: 1.15rem;
+        color: rgb(63, 67, 77);
+        text-align: center;
+    }
+
+    .image-grid img {
+        width: 100%;
+        height: 100%;
+        margin: 0 auto;
+        object-fit: cover;
+    }
+
+    @media (min-width: 1025px) {
+        .image-grid {
+            grid-template-columns: repeat(3, 1fr);
+        }
+    }
+
+    @media (max-width: 1024px) {
+        .image-grid {
+            grid-template-columns: repeat(2, 1fr);
+        }
+    }
+    @media (max-width: 480px) {
+        .image-grid {
+            grid-template-columns: 1fr;
+        }
+    }
+
+
+</style>
