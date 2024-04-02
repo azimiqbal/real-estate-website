@@ -4,11 +4,12 @@ import huh from '../assets/huh.png';
 
 type Props = {
   backgroundColor?: string;
+  position?: string;
 };
 
-const { backgroundColor } = Astro.props as Props;
+const { backgroundColor, position } = Astro.props as Props;
 ---
-<header class="header" style={`background-color: ${backgroundColor};`}>
+<header class="header" style={`background-color: ${backgroundColor}; position: ${position};`}>
   <div class="logo">
     <a href="/">
       <div class="logo-container">
@@ -32,7 +33,8 @@ const { backgroundColor } = Astro.props as Props;
   </div>
   <div class="mobile-nav">
     <ul class="nav">
-      <li><a href="/prosjekter/">Prosjekter</a></li> 
+      <li><a href="/huselementer/">Huselementer</a></li>  
+      <li><a href="/tjenester/">Våre tjenester</a></li> 
       <li><a href="/om-oss/">Om oss</a></li> 
       <li><a href="/kontakt-oss/">Kontakt oss</a></li> 
     </ul>
@@ -51,7 +53,6 @@ const { backgroundColor } = Astro.props as Props;
 <style>    
   .header {
     position: fixed;
-    background-color: rgba(52, 56, 65, 1);
     top: 0;
     left: 0;
     width: 100%;
@@ -60,6 +61,7 @@ const { backgroundColor } = Astro.props as Props;
     align-items: center;
     z-index: 1000;
     font-size: 18px;
+    border-bottom: 1px solid white;
   }
   
   .logo-container {
@@ -82,8 +84,8 @@ const { backgroundColor } = Astro.props as Props;
   }
   
   .logos {
-    height: 75px;
-    width: 90px;
+      height: 85px;
+      width: 100px;
   }
 
   span {
@@ -92,8 +94,8 @@ const { backgroundColor } = Astro.props as Props;
 
   @media (max-width: 768px) {
   .logos {
-    height: 45px;
-    width: 60px;
+    height: 65px;
+    width: 80px;
   }
 }
 
@@ -108,7 +110,7 @@ const { backgroundColor } = Astro.props as Props;
   }
 
   .nav li:not(:last-child) {
-    border-right: 1px solid white;
+    border-right: 1px solid rgb(234, 229, 229);
     padding-right: 15px;
   }
 
@@ -165,7 +167,6 @@ const { backgroundColor } = Astro.props as Props;
     background-color: rgb(234, 229, 229);
     border-radius: 8px;
     margin-top: 18px;
-
   }
 
   .mobile-nav ul {
