@@ -1,0 +1,233 @@
+---
+import Footer from "../components/Footer.astro";
+import Header from "../components/Header.astro";
+import Layout from "../layouts/Layout.astro";
+import { Image } from 'astro:assets';
+import prosjektPic from '../assets/prozzy.jpeg';
+import kjokken1 from '../assets/kjokken1.jpeg';
+import kjokken2 from '../assets/kjokken2.jpg';
+import kjokken3 from '../assets/kjokken3.jpg';
+import halden4 from '../assets/halden4.jpg';
+import halden5 from '../assets/halden5.jpg';
+import halden6 from '../assets/halden6.jpg';
+import contact from '../assets/H5.jpg';
+
+---
+
+<Layout title="NT Bolig - Kontakt oss">
+	<Header position="absolute"/>
+	<main>
+        <Image src={prosjektPic} class="logos" alt="header logo" loading="eager"/>
+        <div class="overlay-text">
+            <h2>Prosjekter vi er stolte av</h2>
+            <h4>Her viser vi til pågående prosjekter i NT Bolig</h4>
+        </div>
+        <h4 class="quality">Vi leverer kvalitet - gang på gang!</h4>
+        <div class="intro-text">
+            <p>
+                Noen utvalgte prosjekter innen minihus og element bygg. Levert til både kunder og egen regi. Vi leverer ifra oss kvalitet med stolthet, til rett tid. Alltid!
+                Her kan du lese om prosjekter vi jobber med per dags dato. Det er alt fra levering av huselementer, arkitekløsninger til graving og elektrisk arbeid vi bistår med i ulike pro
+            </p>
+        </div>
+        <h3>Referanse prosjekter</h3>
+        <div class="image-grid">
+            <div class="image-item">
+                <Image src={kjokken1} alt="Klopp holding the trophy" loading="eager" />
+                <div class="image-text">
+                    <h3>En klassisk stil men samtidig et særpreg. Kundens valg falt på vår populære laminat-type Dab Dublin.</h3>
+                </div>
+            </div>
+            <div class="image-item">
+                <Image src={kjokken2} alt="Klopp holding the trophy" loading="eager" />
+                <div class="image-text">
+                    <h3>Resultatet ble et kjøkken med en unik farge som passet til resten av boligen. </h3>
+                </div>
+            </div>
+            <div class="image-item">
+                <Image src={kjokken3} alt="Klopp holding the trophy" loading="eager" />
+                <div class="image-text">
+                    <h3>Lorem ipsum dolor sit amet</h3>
+                </div>
+            </div>
+            <div class="image-item">
+                <Image src={halden4} alt="Klopp holding the trophy" loading="lazy" />
+                <div class="image-text">
+                    <h3>Lorem ipsum dolor sit amet</h3>
+                </div>
+            </div>
+        </div>
+        <div class="contact-us">
+            <div class="contacting">
+                <Image src={contact} alt="contact us section" loading="lazy" />
+            </div>
+            <a href="/kontakt-oss">
+                <button>Kontakt oss for befaring</button>
+            </a>
+        </div>
+	</main>
+   <Footer/>
+</Layout>
+
+<style>
+    main {
+        height: auto;
+        padding-bottom: 2em;
+        position: relative;
+    }
+
+    .contact-us {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+}
+
+    .contacting {
+        position: relative;
+        width: 100%;
+        padding-bottom: 12px;
+    }
+
+    .contacting img {
+        width: 100%;
+        height: 350px;
+        object-fit: cover;
+        filter: brightness(0.4);
+    }
+    
+    .quality {
+        font-size: 2em;
+        text-align: center;
+        font-weight: 700;
+    }
+
+    h4 {
+        font-weight: 500;
+    }
+
+    h3 {
+        text-align: center;
+        font-size: 2em;
+        font-weight: 500;
+    }
+
+
+	button {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%); /* Adjust the button's position */
+		border: 2px solid white;
+		padding: 10px;
+		background-color: transparent;
+		color: white;
+        width: 300px;
+		font-size: 1.3rem;
+		cursor: pointer;
+		border-radius: 8px;
+	}
+
+	button:hover {
+		background: whitesmoke;
+        color: black;
+	}
+
+    @media (max-width: 480px) {
+        button {
+            width: 200px;
+            font-size: 1rem;
+        }
+    }
+
+    .logos {
+        width: 100%;
+        height: 600px;
+        object-fit: cover;
+        filter: brightness(0.6);
+    }
+
+    .overlay-text {
+        position: absolute;
+        top: 15%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        color: white;
+        font-size: 2em;
+        text-align: center;
+    }
+
+    .intro-text {
+        position: relative;
+        width: 100%;
+        max-width: 1200px;
+        margin: 0 auto;
+        padding-bottom: 40px;
+        box-sizing: border-box;
+        color: rgb(100, 98, 98);
+        line-height: 23px;
+        font-family: "Roboto", sans-serif;
+        text-align: center;
+}
+
+    @media (max-width: 768px) {
+        .intro-text {
+            font-size: 1em;
+            line-height: 22px;
+        }
+    }
+
+    .image-grid {
+        display: grid;
+        grid-gap: 20px;
+        padding: 80px;
+    }
+    .image-item {
+        position: relative;
+        overflow: hidden;
+        padding-bottom: 50px;
+    }
+
+    .image-text h3 {
+        margin: 0 0 16px 0;
+        font-size: 1.15rem;
+        color: rgb(18, 24, 55);
+        text-align: center;
+    }
+
+    .image-grid img {
+        width: 100%;
+        height: 100%;
+        margin: 0 auto;
+        object-fit: cover;
+    }
+
+    @media (min-width: 1025px) {
+        .image-grid {
+            grid-template-columns: repeat(2, 1fr);
+            padding: 0 0 30px 0;
+            margin: 0 auto;
+            width: 1250px;
+            height: auto;
+            border-radius: 8px;
+        }
+    }
+
+    @media (max-width: 1024px) {
+        .image-grid {
+            grid-template-columns: repeat(2, 1fr);
+            padding: 30px;
+        }
+    }
+    @media (max-width: 480px) {
+        .image-grid {
+            grid-template-columns: 1fr;
+            padding: 30px;
+        }
+
+        .overlay-text {
+            top: 10%;
+        }
+
+    }
+
+</style>

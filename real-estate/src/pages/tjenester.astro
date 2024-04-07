@@ -5,6 +5,9 @@ import Footer from '../components/Footer.astro';
 import { Image } from 'astro:assets';
 import kjokken from '../assets/kjokken-cover.jpg.webp';
 import garderobe from '../assets/garderobe-cover.webp';
+import arkitekt from '../assets/arkitekt.webp';
+import element from '../assets/element-bygg.jpeg';
+import placeholder from '../assets/placeholder.jpg';
 
 ---
 
@@ -23,6 +26,36 @@ import garderobe from '../assets/garderobe-cover.webp';
                 </ul>
             </div>
         </div>
+        <div class="arkitekt">
+            <div class="inner-arkitekt">
+              <h2 class="bistand">Fra råbygg til nøkkelferdig bygg</h2>
+              <p class="bizzy">Fra en ide til et hjem, vi er med på hele reisen. Vi tilbyr tjenester med å forvandle råbygg til strøkne, nøkkelferdige bygg. </p>
+            </div>
+            <div class="img-wrapper">
+                <Image src={placeholder} alt="Klopp holding the trophy" loading="eager" />
+            </div>
+        </div>
+        <p></p>
+        <div class="arkitekt">
+            <div class="img-wrapper">
+                <Image src={arkitekt} alt="Klopp holding the trophy" loading="eager" />
+            </div>
+            <div class="inner-arkitekt">
+              <h2 class="bistand">Arkitekt-bistand</h2>
+              <p class="bizzy">Arkitekt tjenester eller tilpassing av våre/deres modeller? Vi visualiserer, tegner, prosjekterer, kalkulerer, sender byggesøknader og mye mer. Vi skaper drømmer og tilbyr det som kunden ønsker. Alltid!</p>
+            </div>
+        </div>
+        <p></p>
+        <div class="arkitekt">
+            <div class="inner-arkitekt">
+              <h2 class="bistand">Element bygg</h2>
+              <p class="bizzy">Kun elementer, eller hele element bygg til prosjektene? Vi produserer og monterer alle typer bygg i elementer. Vegg, gulv, tak, balkong, trapp og andre behov. Se våre prosjekterte og produksjonsklare modeller, vi tilpasser også etter ønsket.</p>
+            </div>
+            <div class="img-wrapper">
+                <Image src={element} alt="Klopp holding the trophy" loading="lazy" />
+            </div>
+        </div>
+        <p></p>
         <div>
             <h2>Kjøkken og garderobe</h2>
             <p>I tillegg til salg av huselementer, tilbyr vi også tilpassede løsninger innen kjøkken og garderobe. Vi skreddersyr kjøkken etter ditt behov og ditt hjem. Vi jobber sammen for å finne den fineste løsningen til ditt baderom. Les mer om dette</p>
@@ -30,7 +63,7 @@ import garderobe from '../assets/garderobe-cover.webp';
         <div class="image-wrapper">
             <div class="image-item">
                 <a href="/kjokken">
-                    <Image src={kjokken} alt="Klopp holding the trophy" loading="eager" />
+                    <Image src={kjokken} alt="Klopp holding the trophy" loading="lazy" />
                     <div class="image-text">
                         <a href="/kjokken">
                             <button class="btn">Kjøkken</button>
@@ -40,7 +73,7 @@ import garderobe from '../assets/garderobe-cover.webp';
             </div>
             <div class="image-item">
                 <a href="/garderobe">
-                    <Image src={garderobe} alt="Klopp holding the trophy" loading="eager" />
+                    <Image src={garderobe} alt="Klopp holding the trophy" loading="lazy" />
                     <div class="image-text">
                         <a href="/garderobe">
                             <button class="btn">Garderobe</button>
@@ -65,11 +98,68 @@ import garderobe from '../assets/garderobe-cover.webp';
         min-height: 100vh;
     }
 
+    .arkitekt {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        background-color: rgb(236, 233, 233);
+        border-radius: 8px;
+        width: 100%;
+    }
+
+
+    @media (max-width: 1070px) {
+        .arkitekt {
+            flex-direction: column;
+            font-size: 1.2em;
+        }
+        .arkitekt div {
+            order: 1;
+        }
+        .arkitekt img {
+            order: 2;
+            width: 500px !important;
+        }
+    
+    }
+
+    @media (max-width: 615px) {
+        .arkitekt img {
+            width: 93% !important;
+        }
+    }
+
+    @media (min-width: 900px) {
+        .arkitekt img {
+            width: 600px !important;
+            height: auto;
+            padding: 8px;
+        }
+    }
+
+
+    .arkitekt img {
+        width: 100%;
+        height: auto;
+        padding: 8px;
+    }
+
+    .bistand {
+        color: rgba(52, 56, 65, 1);
+        font-weight: 700;
+    }
+
+    .bizzy {
+        text-align: left;
+        max-width: 600px;
+        margin-left: 100px;
+    }
+
     .image-wrapper {
         display: flex;
         justify-content: center;
         align-items: center;
-        gap: 20px;
     }
 
     .image-item {
@@ -80,6 +170,7 @@ import garderobe from '../assets/garderobe-cover.webp';
         display: flex;
         justify-content: center;
         align-items: center;
+        margin: 10px;
     }
 
     .image-item img {

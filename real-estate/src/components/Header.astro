@@ -23,7 +23,7 @@ const { backgroundColor, position } = Astro.props as Props;
   <nav class="site-navigation">
     <ul class="nav">
       <li><a href="/huselementer/">Huselementer</a></li>
-      <li><a href="/huselementer/">Prosjekter</a></li>
+      <li><a href="/prosjekter/">Prosjekter</a></li>
       <li class="dropdown">
         <div class="dropdown-container">
           <a href="/tjenester/">Våre tjenester</a>
@@ -47,7 +47,7 @@ const { backgroundColor, position } = Astro.props as Props;
   <div class="mobile-nav">
     <ul class="nav">
       <li><a href="/huselementer/">Huselementer</a></li>
-      <li><a href="/huselementer/">Prosjekter</a></li>
+      <li><a href="/prosjekter/">Prosjekter</a></li>
       <li class="has-submenu">
         <a href="/tjenester/">Våre tjenester</a>
         <Image src={arrowDownMobile} class="arrow-mobile" alt="arrow down" loading="eager" />
@@ -167,8 +167,8 @@ const { backgroundColor, position } = Astro.props as Props;
   }
   
   .logos {
-      height: 85px;
-      width: 100px;
+      height: 105px;
+      width: 120px;
   }
 
   span {
@@ -202,7 +202,7 @@ const { backgroundColor, position } = Astro.props as Props;
     color: white;
     position: relative;
     overflow: hidden;
-    font-size: 20px;
+    font-size: 22px;
   }
 
   .site-navigation a:hover {
@@ -275,7 +275,7 @@ const { backgroundColor, position } = Astro.props as Props;
     display: block;
   }
 
-  @media (max-width: 768px) {
+  @media (max-width: 950px) {
     .site-navigation {
       display: none;
     }
