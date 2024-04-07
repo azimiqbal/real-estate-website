@@ -2,11 +2,6 @@
 import Layout from '../layouts/Layout.astro';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
-import { Image } from 'astro:assets';
-import vvd from '../assets/vvd.webp';
-import seven from '../assets/7-0.jpeg';
-import salah from '../assets/salah.jpeg';
-import klopp from '../assets/klopp.jpg';
 
 ---
 
@@ -32,25 +27,6 @@ import klopp from '../assets/klopp.jpg';
                 Vårt dedikerte team av eksperter er alltid klare til å veilede og assistere kundene gjennom hele prosessen, fra design og planlegging til installasjon. Vi er opptatt av å lytte til kundens ønsker og behov, og strekker oss langt for å oppfylle deres forventninger.
             </p>
         </div>
-		<h2>Møt teamet</h2>
-		<div role="list" class="link-card-grid">
-            <div class="img-grid">
-                <Image class="img" src={vvd} alt="" loading="eager" title="virgil" />
-                <p class="employe-title">Daglig leder i NT Bolig</p>
-            </div>
-            <div class="img-grid">
-                <Image class="img" src={seven} alt="" loading="eager" title="warra performance" />
-                <p class="employe-title">Teknisk direktør i NT Bolig</p>
-            </div>
-            <div class="img-grid">
-                <Image class="img" src={salah} alt="" loading="eager" title="salah" />
-                <p class="employe-title">Owner of Manchester United FC</p>
-            </div>
-            <div class="img-grid">
-                <Image class="img" src={klopp} alt="" loading="eager" title="kloppo" />
-                <p class="employe-title">CEO of NT Bolig</p>
-            </div>
-        </div>
     </main>
     <Footer/>
 </Layout>
@@ -69,14 +45,8 @@ import klopp from '../assets/klopp.jpg';
 		max-width: calc(100% - 2rem);
 		font-size: 20px;
         padding-bottom: 16px;
+        min-height: 100vh;
     }
-
-	img {
-		width: 100%;
-		height: 250px;
-		border-radius: 4px;
-		padding-right: 4px;
-	}
 
     .about-me {
 		justify-content: center;
@@ -99,21 +69,9 @@ import klopp from '../assets/klopp.jpg';
     	color: #292823cb;
     }
 
-    .employe-title {
-        text-align: center;
-        margin-top: 2px;
-    }
-
 	strong {
 		font-weight: 600;
         color: black;
-	}
-
-	.link-card-grid {
-		display: grid;
-		grid-template-columns: repeat(auto-fit, minmax(24ch, 1fr));
-		gap: 3rem;
-		padding: 0;
 	}
 
 </style>

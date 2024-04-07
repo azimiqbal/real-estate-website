@@ -1,6 +1,8 @@
 ---
 import { Image } from 'astro:assets';
 import huh from '../assets/huh.png';
+import arrowDown from '../assets/chevy.png';
+import arrowDownMobile from '../assets/down-arrow.svg';
 
 type Props = {
   backgroundColor?: string;
@@ -20,8 +22,19 @@ const { backgroundColor, position } = Astro.props as Props;
   </div>
   <nav class="site-navigation">
     <ul class="nav">
-      <li><a href="/huselementer/">Huselementer</a></li>  
-      <li><a href="/tjenester/">Våre tjenester</a></li> 
+      <li><a href="/huselementer/">Huselementer</a></li>
+      <li><a href="/huselementer/">Prosjekter</a></li>
+      <li class="dropdown">
+        <div class="dropdown-container">
+          <a href="/tjenester/">Våre tjenester</a>
+          <Image src={arrowDown} class="arrow" alt="arrow down" loading="eager" />
+          <div class="dropdown-content">
+              <a href="/kjokken/">Kjøkken</a>
+              <a href="/garderobe/">Garderobe</a>
+          </div>
+        </div>
+      </li>
+      
       <li><a href="/om-oss/">Om oss</a></li> 
       <li><a href="/kontakt-oss/">Kontakt oss</a></li> 
     </ul>
@@ -33,8 +46,16 @@ const { backgroundColor, position } = Astro.props as Props;
   </div>
   <div class="mobile-nav">
     <ul class="nav">
-      <li><a href="/huselementer/">Huselementer</a></li>  
-      <li><a href="/tjenester/">Våre tjenester</a></li> 
+      <li><a href="/huselementer/">Huselementer</a></li>
+      <li><a href="/huselementer/">Prosjekter</a></li>
+      <li class="has-submenu">
+        <a href="/tjenester/">Våre tjenester</a>
+        <Image src={arrowDownMobile} class="arrow-mobile" alt="arrow down" loading="eager" />
+        <ul class="submenu">
+          <li><a href="/kjokken/">Kjøkken</a></li>
+          <li><a href="/garderobe/">Garderobe</a></li>
+        </ul>
+      </li>
       <li><a href="/om-oss/">Om oss</a></li> 
       <li><a href="/kontakt-oss/">Kontakt oss</a></li> 
     </ul>
@@ -44,9 +65,16 @@ const { backgroundColor, position } = Astro.props as Props;
 <script>
   const mobileNavToggle = document.querySelector('.mobile-nav-toggle');
   const mobileNav = document.querySelector('.mobile-nav');
+  const arrowMobile = document.querySelector('.arrow-mobile');
+  const submenu = document.querySelector('.has-submenu .submenu');
 
   mobileNavToggle?.addEventListener('click', () => {
     mobileNav?.classList.toggle('active');
+  });
+
+  arrowMobile?.addEventListener('click', () => {
+    submenu?.classList.toggle('active');
+    arrowMobile.classList.toggle('rotated');
   });
 </script>
 
@@ -63,7 +91,62 @@ const { backgroundColor, position } = Astro.props as Props;
     font-size: 18px;
     border-bottom: 1px solid white;
   }
+
+
+  .arrow {
+    position: relative;
+    top: 5px;
+    height: 20px;
+    width: 20px;
+    cursor: pointer;
+}
+
+  .dropdown-content {
+    width: 200px;
+    margin-top: 2px;
+    display: none;
+    position: absolute;
+    background-color: rgb(91, 93, 97);
+    border-radius: 6px;
+    text-align: center;
+  }
+
+  .dropdown:hover .dropdown-content {
+      display: block;
+  }
+
+  .dropdown-content a {
+      padding: 12px;
+      text-decoration: none;
+      display: block;
+  }
   
+  
+  .arrow-mobile {
+    position: relative;
+    top: 5px;
+    height: 20px;
+    width: 20px;
+  }
+
+  .submenu {
+    display: none;
+  }
+
+  .submenu.active {
+    display: block;
+  }
+
+  .submenu.active li:first-child,
+  .submenu.active li:last-child {
+    border-bottom: none;
+  }
+
+
+  .arrow-mobile.rotated {
+    transform: rotate(180deg);
+  }
+
   .logo-container {
     display: flex;
     align-items: center;
@@ -142,7 +225,6 @@ const { backgroundColor, position } = Astro.props as Props;
     transform: scaleX(1);
   }
 
-  /* Mobile Navigation */
   .mobile-nav-toggle {
     display: none;
     flex-direction: column;
@@ -172,12 +254,13 @@ const { backgroundColor, position } = Astro.props as Props;
   .mobile-nav ul {
     list-style: none;
     text-align: center;
+    padding: 0;
   }
 
   .mobile-nav li {
     border-bottom: 1px solid gray;
     padding: 14px;
-    margin: 14px;
+    margin: 8px;
   }
 
   .mobile-nav a {
