@@ -12,16 +12,96 @@ import halden3 from '../assets/halden3.jpg';
 import halden4 from '../assets/halden4.jpg';
 import halden5 from '../assets/halden5.jpg';
 import halden6 from '../assets/halden6.jpg';
+import vegg from '../assets/vgg.png';
+import takElement from '../assets/tak-element.png';
+import trapper from '../assets/trapper.png';
+import transp from '../assets/transp.png';
+import assembling from '../assets/assembling.png';
+import prosjektering from '../assets/prosjektering.png';
+import prod from '../assets/prod.png';
+import reiser from '../assets/reiser.png';
+import bjelke from '../assets/bjelke.png';
+import balkong from '../assets/balkong.png';
+import elementsett from '../assets/elementsett.png';
+import Accordion from '../components/Accordion.astro';
 ---
 
 <Layout title="NT Bolig - Om oss">
-    <Header backgroundColor="rgba(52, 56, 65, 1)"/>
+	<Header position="absolute"/>
     <main>
+        <Image src={halden5} class="logos" alt="" loading="eager" />
+        <h1 class="headline">Vi er med på hele reisen</h1>
+        <Image src={reiser} class="rezzy" alt="" loading="eager" />
+        <div class="info">
+            <div class="square black">
+                <div class="number">1</div>
+                <Image src={prosjektering} alt="" loading="eager" />
+                <div class="content">
+                    <h2>Prosjektering</h2>
+                    <p>Våre verktøy konstruerer våre/deres modeller automatisk i elementer</p>
+                </div>
+            </div>
+            <div class="square orange">
+                <div class="number">2</div>
+                <Image src={prod} alt="" loading="eager" />
+                <div class="content">
+                    <h2>Produksjon</h2>
+                    <p>Vi ferdigstiller alle typer minihus og elementer i høyst mulig grad, før de pakkes inn tørre og klar til</p>
+                </div>
+            </div>
+            <div class="square orange">
+                <div class="number">3</div>
+                <Image src={transp} alt="" loading="eager" />
+                <div class="content">
+                    <h2>Transport</h2>
+                    <p>Pakkede minihus og elementer heises på bil/båt, leveres prosjekter i hele Norge, til avtalt tid og sted. Vi har utstyret til både frakt og montasje. </p>
+                </div>
+            </div>
+            <div class="square black">
+                <div class="number">4</div>
+                <Image src={assembling} alt="" loading="eager" />
+                <div class="content">
+                    <h2>Montasje</h2>
+                    <p>Byggeplassen klargjøres parallelt med produksjon. Elementer heises og festes på treramme i ringmurene. Vipps så er bygget montert og tett.</p>
+                </div>
+            </div>
+        </div>
+        <div class="overlay-text">
+            <h2>Hus elementer</h2>
+            <h4>Til store og små prosjekter - du kan regne med oss!</h4>
+        </div>
+        <h2 class="tit">Vi leverer alt fra A til Å</h2>
+        <div class="image-row">
+            <div class="image-items">
+              <Image src={vegg} alt="" loading="eager" />
+              <p>Vegg element</p>
+            </div>
+            <div class="image-items">
+                <Image src={takElement} alt="" loading="eager" />
+                <p>Tak element</p>
+            </div>
+            <div class="image-items">
+                <Image src={bjelke} alt="" loading="eager" />
+                <p>Bjelkelag</p>
+            </div>
+            <div class="image-items">
+                <Image src={balkong} alt="" loading="eager" />
+                <p>Balkong</p>
+            </div>
+            <div class="image-items">
+              <Image src={trapper} alt="" loading="eager" />
+              <p>Trapper</p>
+            </div>
+            <div class="image-items">
+                <Image src={elementsett} alt="" loading="eager" />
+                <p>Elementsett</p>
+            </div>
+          </div>
         <h1>Huselementer fra NT Bolig</h1>
         <div class="image-grid">
             <div class="image-item">
                 <a href={halden1.src}>
-                    <Image src={halden1} alt="Klopp holding the trophy" loading="eager" />
+                    <Image src={halden1} alt="" loading="eager" />
                 </a>
                 <div class="image-text">
                     <h3>Lorem ipsum dolor sit amet</h3>
@@ -29,7 +109,7 @@ import halden6 from '../assets/halden6.jpg';
             </div>
             <div class="image-item">
                 <a href={halden2.src}>
-                    <Image src={halden2} alt="Klopp holding the trophy" loading="eager" />
+                    <Image src={halden2} alt="" loading="eager" />
                 </a>
                 <div class="image-text">
                     <h3>Lorem ipsum dolor sit amet</h3>
@@ -37,7 +117,7 @@ import halden6 from '../assets/halden6.jpg';
             </div>
             <div class="image-item">
                 <a href={halden3.src}>
-                    <Image src={halden3} alt="Klopp holding the trophy" loading="eager" />
+                    <Image src={halden3} alt="" loading="eager" />
                 </a>
                 <div class="image-text">
                     <h3>Lorem ipsum dolor sit amet</h3>
@@ -45,7 +125,7 @@ import halden6 from '../assets/halden6.jpg';
             </div>
             <div class="image-item">
                 <a href={halden4.src}>
-                    <Image src={halden4} alt="Klopp holding the trophy" loading="eager" />
+                    <Image src={halden4} alt="" loading="lazy" />
                 </a>
                 <div class="image-text">
                     <h3>Lorem ipsum dolor sit amet</h3>
@@ -53,7 +133,7 @@ import halden6 from '../assets/halden6.jpg';
             </div>
             <div class="image-item">
                 <a href={halden5.src}>
-                    <Image src={halden5} alt="Klopp holding the trophy" loading="eager" />
+                    <Image src={halden5} alt="" loading="lazy" />
                 </a>
                 <div class="image-text">
                     <h3>Lorem ipsum dolor sit amet</h3>
@@ -61,7 +141,7 @@ import halden6 from '../assets/halden6.jpg';
             </div>
             <div class="image-item">
                 <a href={halden6.src}>
-                    <Image src={halden6} alt="Klopp holding the trophy" loading="eager" />
+                    <Image src={halden6} alt="" loading="lazy" />
                 </a>
                 <div class="image-text">
                     <h3>Lorem ipsum dolor sit amet</h3>
@@ -69,7 +149,7 @@ import halden6 from '../assets/halden6.jpg';
             </div>
             <div class="image-item">
                 <a href={snaroya2.src}>
-                    <Image src={snaroya2} alt="Klopp holding the trophy" loading="eager" />
+                    <Image src={snaroya2} alt="" loading="lazy" />
                 </a>
                 <div class="image-text">
                     <h3>Lorem ipsum dolor sit amet</h3>
@@ -77,7 +157,7 @@ import halden6 from '../assets/halden6.jpg';
             </div>
             <div class="image-item">
                 <a href={snaroya4.src}>
-                    <Image src={snaroya4} alt="Klopp holding the trophy" loading="eager" />
+                    <Image src={snaroya4} alt="" loading="lazy" />
                 </a>
                 <div class="image-text">
                     <h3>Lorem ipsum dolor sit amet</h3>
@@ -85,12 +165,15 @@ import halden6 from '../assets/halden6.jpg';
             </div>
             <div class="image-item">
                 <a href={snaroya5.src}>
-                    <Image src={snaroya5} alt="Klopp holding the trophy" loading="eager" />
+                    <Image src={snaroya5} alt="" loading="lazy" />
                 </a>
                 <div class="image-text">
                     <h3>Lorem ipsum dolor sit amet</h3>
                 </div>
             </div>
+        </div>
+        <div>
+            <Accordion/>
         </div>
     </main>
     <Footer/>
@@ -100,8 +183,137 @@ import halden6 from '../assets/halden6.jpg';
     main {
         font-family: 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
         background-color: whitesmoke;
+    }
+
+    .headline {
+        font-size: 3.2em;
+        font-weight: 700;
+    }
+
+    .rezzy {
+        display: flex;
+        width: 300px;
+        height: 300px;
+        margin: 0 auto;
+        padding-bottom: 40px;
+    }
+
+    .info {
+        display: flex;
+        justify-content: center;
+        gap: 15px;
+        flex-wrap: wrap;
         padding: 40px;
     }
+
+    .info img {
+        width: 120px;
+        height: 100px;
+    }
+
+    .square {
+        position: relative;
+        width: 605px;
+        height: 330px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 10px;
+        border-radius: 10px;
+    }
+
+    .number {
+        position: absolute;
+        top: 10px;
+        left: 10px;
+        color: white;
+        font-size: 1.2em;
+        border-radius: 5px;
+    }
+
+    .black {
+        background-color: black;
+        color: white;
+    }
+
+    .orange {
+        background-color: orange;
+        color: black;
+    }
+
+    .content {
+        text-align: center;
+    }
+
+    .content h2 {
+        font-size: 1.8em;
+    }
+
+    .content p {
+        margin: 0;
+        padding: 4px;
+        line-height: 1.4em;
+    }
+
+    .logos {
+        width: 100%;
+        height: 600px;
+        object-fit: cover;
+        filter: brightness(0.6);
+        padding: 0;
+    }
+
+    .overlay-text {
+        position: absolute;
+        top: 25%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        color: white;
+        font-size: 2em;
+        text-align: center;
+    }
+
+    .tit {
+        padding: 80px 0 20px;
+        text-align: center;
+        font-size: 2em;
+        font-weight: 500;
+    }
+
+    .image-row {
+        display: flex;
+        justify-content: space-around;
+        background-color: rgb(236, 233, 233);
+        padding: 4px;
+    }    
+
+    .image-row img {
+        width: 128px;
+        height: 100px;
+    }
+
+    .image-items {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    @media (max-width: 750px) {
+    .image-row {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .image-row p {
+        text-align: center; /* Center the text */
+    }
+
+    .image-row img {
+        width: 150px;
+        height: 120px;
+    }
+}
 
     h1 {
         padding-top: 4.5rem;
@@ -112,6 +324,7 @@ import halden6 from '../assets/halden6.jpg';
     .image-grid {
         display: grid;
         grid-gap: 20px;
+        padding: 40px;
     }
     .image-item {
         position: relative;

@@ -22,13 +22,14 @@ const { backgroundColor, position } = Astro.props as Props;
   </div>
   <nav class="site-navigation">
     <ul class="nav">
-      <li><a href="/huselementer/">Huselementer</a></li>
+      <li><a href="/huselementer/">Hus elementer</a></li>
       <li><a href="/prosjekter/">Prosjekter</a></li>
       <li class="dropdown">
         <div class="dropdown-container">
           <a href="/tjenester/">Våre tjenester</a>
           <Image src={arrowDown} class="arrow" alt="arrow down" loading="eager" />
           <div class="dropdown-content">
+              <a href="/huselementer">Huselementer</a>
               <a href="/kjokken/">Kjøkken</a>
               <a href="/garderobe/">Garderobe</a>
           </div>
@@ -52,6 +53,7 @@ const { backgroundColor, position } = Astro.props as Props;
         <a href="/tjenester/">Våre tjenester</a>
         <Image src={arrowDownMobile} class="arrow-mobile" alt="arrow down" loading="eager" />
         <ul class="submenu">
+          <li><a href="/huselementer/">Huselementer</a></li>
           <li><a href="/kjokken/">Kjøkken</a></li>
           <li><a href="/garderobe/">Garderobe</a></li>
         </ul>

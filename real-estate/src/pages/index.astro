@@ -24,6 +24,31 @@ import snaroya4 from '../assets/snaroya4.jpg';
                 </div>
             </div>
         </div>
+		<div id="target-section" class="conteez">
+			<h2 class="counters">Counters</h2>
+			<div class="conteez-grid">
+				<div class="text-center animate">
+					<p class="font-bold">520</p>
+					<p class="font-semibold">Stars</p>
+					<p class="text-2xl">on Github</p>
+				</div>
+				<div class="text-center animate">
+					<p class="font-bold">17</p>
+					<p class="font-semibold">Accessible</p>
+					<p class="text-2xl">Components</p>
+				</div>
+				<div class="text-center animate">
+					<p class="font-bold">500</p>
+					<p class="font-semibold">Commits</p>
+					<p class="text-2xl">Merged</p>
+				</div>
+				<div class="text-center animate">
+					<p class="font-bold">18+</p>
+					<p class="font-semibold">Sites</p>
+					<p class="text-2xl">Launched</p>
+				</div>
+			</div>
+		</div>
 		<div class="target-section" id="target-section">
 			<div class="content">
 				<h4>NT Bolig</h4>
@@ -68,6 +93,68 @@ import snaroya4 from '../assets/snaroya4.jpg';
 		color: whitesmoke;
 		font-family:'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 		padding-bottom: 20px;
+	}
+
+	.conteez {
+		margin: 0 auto;
+		padding: 0 1rem;
+		max-width: 100%;
+	}
+
+	.conteez-grid {
+		display: grid;
+		gap: 1rem;
+		grid-template-columns: repeat(1, minmax(0, 1fr));
+	}
+
+	@media (min-width: 640px) {
+		.conteez-grid {
+			grid-template-columns: repeat(2, minmax(0, 1fr));
+		}
+	}
+
+	@media (min-width: 768px) {
+		.conteez-grid {
+			grid-template-columns: repeat(4, minmax(0, 1fr));
+		}
+	}
+
+
+	.counters {
+		line-height: 1;
+		font-size: 3.75em;
+		color: black;
+		text-align: center;
+	}
+
+	.text-center {
+		text-align: center;
+	}
+
+	.font-bold {
+		color: hsl(173, 81%, 68%);
+		font-size: 3.75rem;
+    	line-height: 1;
+		font-weight: 700;
+	}
+
+	.font-semibold {
+		font-size: 2.25rem;
+    	line-height: 2.5rem;
+		font-weight: 600;
+	}
+
+	.text-2xl {
+		font-size: 1.5rem;
+    	line-height: 2rem;	
+	}
+	
+
+	@media (min-width: 75em) {
+		.conteez {
+			padding: 0 1rem;
+			max-width: 1200px;
+		}
 	}
 
 	.container {
@@ -172,10 +259,24 @@ import snaroya4 from '../assets/snaroya4.jpg';
 	}
 
 	.column-image {
+		position: relative;
 		padding: 40px;
+		overflow: hidden;
+	}
+
+	.column-image::before {
+		content: '';
+		position: absolute;
+		top: 0;
+		width: 200%;
+		height: 100%;
+		background-color: rgba(0, 0, 0, 0.453);
+		transform: skewX(-10deg);
 	}
 
 	.imgy {
+		position: relative;
+		z-index: 1;
 		width: 100%;
 		height: 100%;
 		object-fit: cover;

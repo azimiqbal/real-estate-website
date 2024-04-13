@@ -1,0 +1,142 @@
+<div class="accordion-body">
+    <div class="accordion">
+      <h1>Hvorfor råbygg?</h1>
+      <hr>
+      <div class="container">
+        <div class="label">Kort byggetid</div>
+        <div class="content">Produksjonen skjer parallelt med grunnarbeid og ringmurer. Når det er klart vil montasje av elementer starte, hvor veien til tett bygg og ferdigstilling av prosjektet er kort. Videre arbeider vil foregå i tett og tørt bygg.</div>
+      </div>
+      <hr>
+      <div class="container">
+        <div class="label">Miljø og sikkerhet</div>
+        <div class="content">CSS stands for Cascading Style Sheets. It is the language for describing the presentation of Web pages, including colours, layout, and fonts, thus making our web pages presentable to the users. CSS is designed to make style sheets for the web. It is independent of HTML and can be used with any XML-based markup language.
+  </div>
+      </div>
+      <hr>
+      <div class="container">
+        <div class="label">Ferdighet</div>
+        <div class="content">Elementer og minihus leveres i så høy ferdighetgrad som mulig, med oppbygnings som ønskes.</div>
+      </div>
+      <hr>
+      <div class="container">
+        <div class="label">Kvalitet</div>
+        <div class="content">React is a JavaScript library created for building fast and interactive user interfaces for web and mobile applications. It is an open-source, component-based, front-end library responsible only for the application’s view layer.</div>
+      </div>
+      <hr>
+      <div class="container">
+        <div class="label">Økonomi og lav risiko</div>
+        <div class="content">React is a JavaScript library created for building fast and interactive user interfaces for web and mobile applications. It is an open-source, component-based, front-end library responsible only for the application’s view layer.</div>
+      </div>
+      <hr>
+    </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            let labels = document.querySelectorAll('.accordion .label');
+            labels.forEach(label => {
+                label.addEventListener('click', () => {
+                    const container = label.parentElement;
+                    container?.classList.toggle('active');
+                });
+            });
+        });
+        
+    </script>
+    
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300&display=swap');
+
+body {
+/*  font-family: 'rubik', sans-serif;*/  
+} 
+
+h1 {
+  text-align: center;
+  margin: 10px 0;
+  font-size: 1.6em;
+}
+
+.accordion-body {
+  padding: 40px;
+}
+
+.accordion {
+  margin: 90px auto;
+  color: black;
+  background-color: rgb(236, 233, 233);
+  padding: 45px 45px;
+}
+
+@media (min-width: 1024px) {
+  .accordion {
+    width: 40%;
+  }
+
+}
+
+@media (max-width: 600px) {
+  .accordion {
+    padding: 20px 20px;
+    width: 100%;
+  }
+}
+
+.accordion .container {
+  position: relative;
+  margin: 10px 10px;
+  word-wrap: break-word;
+}
+
+.accordion .label {
+  position: relative;
+  padding: 20px 0;
+  font-size: 1.1em;
+  color: black;
+  cursor: pointer;
+}
+
+.accordion .label::before {
+  content: '+';
+  color: black;
+  position: absolute;
+  top: 50%;
+  right: -5px;
+  font-size: 1.6em;
+  transform: translateY(-50%);
+}
+
+@media (max-width: 600px) {
+  .accordion .label::before {
+    right: -20px;
+    font-size: 1.2em;
+  }
+}
+
+.accordion .content {
+  position: relative;
+  background-color: rgb(236, 233, 233);
+  height: 0;
+  font-size: 20px;
+  text-align: left;
+  overflow: hidden;
+  transition: 0.5s;
+}
+
+.accordion hr {
+  width: 100%;
+  margin-left: 0;
+  border: 1px solid grey;
+}
+
+.accordion .container.active .content {
+  height: 200px;
+}
+
+.accordion .container.active .label::before {
+  content: '-';
+  font-size: 30px;
+}
+
+</style>
