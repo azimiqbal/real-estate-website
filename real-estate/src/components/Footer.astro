@@ -1,39 +1,96 @@
-<footer class="footer">
-    <div class="footer-content">
-        <p>Kontakt oss:</p>
-        <ul class="contact-info">
-            <li>Email: info@example.com</li>
-            <li>Phone: +12345678</li>
-        </ul>
-    </div>
-    <div class="footer-bottom">
-        <p>&copy; 2024 NT Bolig</p>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<!--GOOGLE FONTS-->
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Play&display=swap" rel="stylesheet"> 
+</head>
+<body>
+<footer>
+    <div class="footer">
+        <div class="row">
+            <a href="#"><i class="fa fa-facebook"></i></a>
+            <a href="#"><i class="fa fa-instagram"></i></a>
+            <a href="#"><i class="fa fa-youtube"></i></a>
+            <a href="#"><i class="fa fa-twitter"></i></a>
+        </div>
+        <div class="row">
+            <ul>
+                <li><a href="/tjenester/">Våre tjenester</a></li>
+                <li><a href="/om-oss/">Om oss</a></li>
+                <li><a href="/kontakt-oss/">Kontakt oss</a></li>
+            </ul>
+        </div>
+        <div class="row">
+            <p>&copy; 2024 - NT Bolig</p>
+        </div>
     </div>
 </footer>
-
 <style>
+
+    :root {
+		--bg-color: #1c1c1c;
+		--bg-color-light: #3b3b3b;
+	}
+    body {
+        margin: 0;
+        overflow-x: hidden;
+        box-sizing: border-box;
+    }
+
     .footer {
-        background-color: rgba(52, 56, 65, 1);
-        color: #fff;
-        padding: 20px 0;
+        background: black;
+        padding: 30px 0px;
+        font-family: 'Play', sans-serif;
         text-align: center;
+    }
+
+    .footer .row {
         width: 100%;
+        margin: 1% 0%;
+        padding: 0.6% 0%;
+        color: rgb(150, 143, 143);
+        font-size: 0.8em;
     }
 
-    .footer-content {
-        margin-bottom: 20px;
+    .footer .row a {
+        text-decoration: none;
+        color: rgb(196, 188, 188);
+        transition: 0.5s;
     }
 
-    .footer-bottom {
-        font-size: 0.8rem;
+    .footer .row a:hover {
+        color: #fff;
     }
 
-    .contact-info {
-        list-style: none;
-        padding: 0;
+/*     .footer .row ul {
+        width: 100%;
+    } */
+
+    .footer .row ul li {
+        display: inline-block;
+        margin: 0px 25px;
+        font-size: 1.2em;
     }
 
-    .contact-info li {
-        margin-bottom: 5px;
+    .footer .row a i {
+        font-size: 2em;
+        margin: 0% 1%;
+    }
+
+    @media (max-width:720px) {
+    .footer {
+        padding: 5% 0;
+    }
+
+    .footer .row {
+        margin: 0;
+    }
+    .footer .row ul li {
+        display: block;
+        margin: 10px 60px 0 0px;
+    }
+        .footer .row a i {
+            margin: 0% 3%;
+        }
     }
 </style>

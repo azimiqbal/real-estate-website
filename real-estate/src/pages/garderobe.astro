@@ -30,37 +30,37 @@ import contact from '../assets/H5.jpg';
         <h3>Referanse prosjekter</h3>
         <div class="image-grid">
             <div class="image-item">
-                <Image src={garderobe1} alt="Klopp holding the trophy" loading="eager" />
+                <Image src={garderobe1} alt="" loading="eager" />
                 <div class="image-text">
                     <h3>Enebolig på Ellingsrud - Friske farger med praktiske løsninger gjorde at kunden ble fornøyd.</h3>
                 </div>
             </div>
             <div class="image-item">
-                <Image src={garderobe2} alt="Klopp holding the trophy" loading="eager" />
+                <Image src={garderobe2} alt="" loading="eager" />
                 <div class="image-text">
                     <h3>Lorem ipsum dolor sit amet</h3>
                 </div>
             </div>
             <div class="image-item">
-                <Image src={garderobe3} alt="Klopp holding the trophy" loading="eager" />
+                <Image src={garderobe3} alt="" loading="eager" />
                 <div class="image-text">
                     <h3>Lorem ipsum dolor sit amet</h3>
                 </div>
             </div>
             <div class="image-item">
-                <Image src={halden4} alt="Klopp holding the trophy" loading="eager" />
+                <Image src={halden4} alt="" loading="eager" />
                 <div class="image-text">
                     <h3>Lorem ipsum dolor sit amet</h3>
                 </div>
             </div>
             <div class="image-item">
-                <Image src={halden5} alt="Klopp holding the trophy" loading="eager" />
+                <Image src={halden5} alt="" loading="eager" />
                 <div class="image-text">
                     <h3>Lorem ipsum dolor sit amet</h3>
                 </div>
             </div>
             <div class="image-item">
-                <Image src={halden6} alt="Klopp holding the trophy" loading="eager" />
+                <Image src={halden6} alt="" loading="eager" />
                 <div class="image-text">
                     <h3>Lorem ipsum dolor sit amet</h3>
                 </div>
@@ -79,10 +79,16 @@ import contact from '../assets/H5.jpg';
 </Layout>
 
 <style>
+
+    :root {
+		--bg-color: #1c1c1c;
+		--bg-color-light: #3b3b3b;
+	}
     main {
         height: auto;
         padding-bottom: 2em;
         position: relative;
+        background-color: var(--bg-color);
     }
 
     .contact-us {
@@ -113,6 +119,7 @@ import contact from '../assets/H5.jpg';
         text-align: center;
         font-size: 2em;
         font-weight: 500;
+        color: white;
     }
 
     button {
@@ -166,7 +173,7 @@ import contact from '../assets/H5.jpg';
         margin: 0 auto;
         padding: 30px 20px;
         box-sizing: border-box;
-        color: rgb(100, 98, 98);
+        color: white;
         line-height: 26px;
         font-family: "Roboto", sans-serif;
 }
@@ -181,7 +188,7 @@ import contact from '../assets/H5.jpg';
     .image-grid {
         display: grid;
         grid-gap: 20px;
-        padding: 80px;
+        padding: 40px;
     }
     .image-item {
         position: relative;
@@ -189,10 +196,18 @@ import contact from '../assets/H5.jpg';
         padding-bottom: 50px;
     }
 
+    .image-text {
+        position: absolute;
+        left: 0;
+        right: 0;
+        background-color: var(--bg-color-light);
+        padding: 4px;
+    }
+
     .image-text h3 {
         margin: 0 0 16px 0;
         font-size: 1.15rem;
-        color: rgb(63, 67, 77);
+        color: rgb(255, 255, 255);
         text-align: center;
     }
 

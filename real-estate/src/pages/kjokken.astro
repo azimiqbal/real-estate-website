@@ -30,37 +30,37 @@ import contact from '../assets/H5.jpg';
         <h3>Referanse prosjekter</h3>
         <div class="image-grid">
             <div class="image-item">
-                <Image src={kjokken1} alt="Klopp holding the trophy" loading="eager" />
+                <Image src={kjokken1} alt="" loading="eager" />
                 <div class="image-text">
                     <h3>En klassisk stil men samtidig et særpreg. Kundens valg falt på vår populære laminat-type Dab Dublin.</h3>
                 </div>
             </div>
             <div class="image-item">
-                <Image src={kjokken2} alt="Klopp holding the trophy" loading="eager" />
+                <Image src={kjokken2} alt="" loading="eager" />
                 <div class="image-text">
                     <h3>Resultatet ble et kjøkken med en unik farge som passet til resten av boligen. </h3>
                 </div>
             </div>
             <div class="image-item">
-                <Image src={kjokken3} alt="Klopp holding the trophy" loading="eager" />
+                <Image src={kjokken3} alt="" loading="eager" />
                 <div class="image-text">
                     <h3>Lorem ipsum dolor sit amet</h3>
                 </div>
             </div>
             <div class="image-item">
-                <Image src={halden4} alt="Klopp holding the trophy" loading="lazy" />
+                <Image src={halden4} alt="" loading="lazy" />
                 <div class="image-text">
                     <h3>Lorem ipsum dolor sit amet</h3>
                 </div>
             </div>
             <div class="image-item">
-                <Image src={halden5} alt="Klopp holding the trophy" loading="lazy" />
+                <Image src={halden5} alt="" loading="lazy" />
                 <div class="image-text">
                     <h3>Lorem ipsum dolor sit amet</h3>
                 </div>
             </div>
             <div class="image-item">
-                <Image src={halden6} alt="Klopp holding the trophy" loading="lazy" class="full-width" />
+                <Image src={halden6} alt="" loading="lazy" class="full-width" />
                 <div class="image-text">
                     <h3>Lorem ipsum dolor sit amet</h3>
                 </div>
@@ -79,10 +79,16 @@ import contact from '../assets/H5.jpg';
 </Layout>
 
 <style>
+
+    :root {
+		--bg-color: #1c1c1c;
+		--bg-color-light: #3b3b3b;
+	}
     main {
         height: auto;
         padding-bottom: 2em;
         position: relative;
+        background-color: var(--bg-color);
     }
 
     .contact-us {
@@ -114,6 +120,7 @@ import contact from '../assets/H5.jpg';
         text-align: center;
         font-size: 2em;
         font-weight: 500;
+        color: white;
     }
 
 
@@ -168,7 +175,7 @@ import contact from '../assets/H5.jpg';
         margin: 0 auto;
         padding: 30px 20px;
         box-sizing: border-box;
-        color: rgb(100, 98, 98);
+        color: white;
         line-height: 26px;
         font-family: "Roboto", sans-serif;
 }
@@ -183,7 +190,7 @@ import contact from '../assets/H5.jpg';
     .image-grid {
         display: grid;
         grid-gap: 20px;
-        padding: 80px;
+        padding: 40px;
     }
     .image-item {
         position: relative;
@@ -191,12 +198,21 @@ import contact from '../assets/H5.jpg';
         padding-bottom: 50px;
     }
 
+    .image-text {
+        position: absolute;
+        left: 0;
+        right: 0;
+        background-color: var(--bg-color-light);
+        padding: 4px;
+    }
+
     .image-text h3 {
         margin: 0 0 16px 0;
         font-size: 1.15rem;
-        color: rgb(18, 24, 55);
+        color: rgb(255, 255, 255);
         text-align: center;
     }
+    
 
     .image-grid img {
         width: 100%;

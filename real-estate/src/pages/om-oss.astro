@@ -2,11 +2,13 @@
 import Layout from '../layouts/Layout.astro';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
+import { Image } from 'astro:assets';
+import ommy from '../assets/ommy.png';
 
 ---
 
 <Layout title="NT Bolig - Om oss">
-    <Header backgroundColor="rgba(52, 56, 65, 1)"/>
+	<Header backgroundColor="var(--bg-color-light)" border='none'/>
     <main>
         <div class="about-me">
             <h2>Hvem er NT Bolig?</h2>
@@ -16,7 +18,7 @@ import Footer from '../components/Footer.astro';
             <p>
                 NT Bolig er et firma som spesialiserer seg på levering av huselementer samt skreddersydde kjøkken og garderobeløsninger. Siden 2022 har vi levert omtrent 20 kjøkken og 10 garderober til våre kunder. Vår stolthet ligger i å levere produkter av høy kvalitet og å tilby ypperste kundeservice.
             </p>
-            <p></p>
+            <Image src={ommy} class="logos" alt="header logo" loading="eager"/>
             <p>
                 <strong>Ny spiller</strong>
             </p>
@@ -32,9 +34,11 @@ import Footer from '../components/Footer.astro';
 </Layout>
 
 <style>
-    :global(body) {
-        background-color: whitesmoke;
-    }
+
+    :root {
+		--bg-color: #1c1c1c;
+		--bg-color-light: #3b3b3b;
+	}
 
     main {
 		font-family:'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
@@ -46,6 +50,10 @@ import Footer from '../components/Footer.astro';
 		font-size: 20px;
         padding-bottom: 16px;
         min-height: 100vh;
+    }
+
+    body {
+        background-color: var(--bg-color);
     }
 
     .about-me {
@@ -61,17 +69,18 @@ import Footer from '../components/Footer.astro';
         line-height: 32px;
         margin-bottom: 1rem;
         padding-top: 3rem;
+        color: white;
     }
 
     p {
         font-size: 18px;
         line-height: 28px;
-    	color: #292823cb;
+    	color: white;
     }
 
 	strong {
 		font-weight: 600;
-        color: black;
+        color: white;
 	}
 
 </style>

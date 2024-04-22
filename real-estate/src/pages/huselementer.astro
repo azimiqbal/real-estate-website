@@ -14,7 +14,7 @@ import halden5 from '../assets/halden5.jpg';
 import halden6 from '../assets/halden6.jpg';
 import vegg from '../assets/vgg.png';
 import takElement from '../assets/tak-element.png';
-import trapper from '../assets/trapper.png';
+import trap from '../assets/trap.png';
 import transp from '../assets/transp.png';
 import assembling from '../assets/assembling.png';
 import prosjektering from '../assets/prosjektering.png';
@@ -29,37 +29,37 @@ import Accordion from '../components/Accordion.astro';
 <Layout title="NT Bolig - Om oss">
 	<Header position="absolute"/>
     <main>
-        <Image src={halden5} class="logos" alt="" loading="eager" />
+        <img src={halden5.src} class="logos" alt="" loading="eager" style="background-color: whitesmoke;" />
         <h1 class="headline">Vi er med på hele reisen</h1>
         <Image src={reiser} class="rezzy" alt="" loading="eager" />
         <div class="info">
-            <div class="square black">
+            <div class="square dark">
                 <div class="number">1</div>
-                <Image src={prosjektering} alt="" loading="eager" />
+                <Image src={prosjektering} alt="" loading="lazy" />
                 <div class="content">
                     <h2>Prosjektering</h2>
                     <p>Våre verktøy konstruerer våre/deres modeller automatisk i elementer</p>
                 </div>
             </div>
-            <div class="square orange">
+            <div class="square light">
                 <div class="number">2</div>
-                <Image src={prod} alt="" loading="eager" />
+                <Image src={prod} alt="" loading="lazy" />
                 <div class="content">
                     <h2>Produksjon</h2>
                     <p>Vi ferdigstiller alle typer minihus og elementer i høyst mulig grad, før de pakkes inn tørre og klar til</p>
                 </div>
             </div>
-            <div class="square orange">
+            <div class="square light">
                 <div class="number">3</div>
-                <Image src={transp} alt="" loading="eager" />
+                <Image src={transp} alt="" loading="lazy" />
                 <div class="content">
                     <h2>Transport</h2>
                     <p>Pakkede minihus og elementer heises på bil/båt, leveres prosjekter i hele Norge, til avtalt tid og sted. Vi har utstyret til både frakt og montasje. </p>
                 </div>
             </div>
-            <div class="square black">
+            <div class="square dark">
                 <div class="number">4</div>
-                <Image src={assembling} alt="" loading="eager" />
+                <Image src={assembling} alt="" loading="lazy" />
                 <div class="content">
                     <h2>Montasje</h2>
                     <p>Byggeplassen klargjøres parallelt med produksjon. Elementer heises og festes på treramme i ringmurene. Vipps så er bygget montert og tett.</p>
@@ -73,27 +73,27 @@ import Accordion from '../components/Accordion.astro';
         <h2 class="tit">Vi leverer alt fra A til Å</h2>
         <div class="image-row">
             <div class="image-items">
-              <Image src={vegg} alt="" loading="eager" />
+              <Image src={vegg} alt="" loading="lazy" />
               <p>Vegg element</p>
             </div>
             <div class="image-items">
-                <Image src={takElement} alt="" loading="eager" />
+                <Image src={takElement} alt="" loading="lazy" />
                 <p>Tak element</p>
             </div>
             <div class="image-items">
-                <Image src={bjelke} alt="" loading="eager" />
+                <Image src={bjelke} alt="" loading="lazy" />
                 <p>Bjelkelag</p>
             </div>
             <div class="image-items">
-                <Image src={balkong} alt="" loading="eager" />
+                <Image src={balkong} alt="" loading="lazy" />
                 <p>Balkong</p>
             </div>
             <div class="image-items">
-              <Image src={trapper} alt="" loading="eager" />
+              <Image src={trap} alt="" loading="lazy" />
               <p>Trapper</p>
             </div>
             <div class="image-items">
-                <Image src={elementsett} alt="" loading="eager" />
+                <Image src={elementsett} alt="" loading="lazy" />
                 <p>Elementsett</p>
             </div>
           </div>
@@ -101,7 +101,7 @@ import Accordion from '../components/Accordion.astro';
         <div class="image-grid">
             <div class="image-item">
                 <a href={halden1.src}>
-                    <Image src={halden1} alt="" loading="eager" />
+                    <Image src={halden1} alt="" loading="lazy" />
                 </a>
                 <div class="image-text">
                     <h3>Lorem ipsum dolor sit amet</h3>
@@ -109,7 +109,7 @@ import Accordion from '../components/Accordion.astro';
             </div>
             <div class="image-item">
                 <a href={halden2.src}>
-                    <Image src={halden2} alt="" loading="eager" />
+                    <Image src={halden2} alt="" loading="lazy" />
                 </a>
                 <div class="image-text">
                     <h3>Lorem ipsum dolor sit amet</h3>
@@ -117,7 +117,7 @@ import Accordion from '../components/Accordion.astro';
             </div>
             <div class="image-item">
                 <a href={halden3.src}>
-                    <Image src={halden3} alt="" loading="eager" />
+                    <Image src={halden3} alt="" loading="lazy" />
                 </a>
                 <div class="image-text">
                     <h3>Lorem ipsum dolor sit amet</h3>
@@ -180,14 +180,20 @@ import Accordion from '../components/Accordion.astro';
 </Layout>
 
 <style>
+
+:root {
+		--bg-color: #1c1c1c;
+		--bg-color-light: #3b3b3b;
+	}
     main {
         font-family: 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-        background-color: whitesmoke;
+		background-color: var(--bg-color);
     }
 
     .headline {
         font-size: 3.2em;
         font-weight: 700;
+        color: #6fa284;
     }
 
     .rezzy {
@@ -232,13 +238,13 @@ import Accordion from '../components/Accordion.astro';
         border-radius: 5px;
     }
 
-    .black {
-        background-color: black;
+    .dark {
+        background-color: rgb(26, 23, 23);
         color: white;
     }
 
-    .orange {
-        background-color: orange;
+    .light {
+        background-color: #6fa284;
         color: black;
     }
 
@@ -279,13 +285,14 @@ import Accordion from '../components/Accordion.astro';
         text-align: center;
         font-size: 2em;
         font-weight: 500;
+        color: white;
     }
 
     .image-row {
         display: flex;
         justify-content: space-around;
-        background-color: rgb(236, 233, 233);
         padding: 4px;
+        color: white;
     }    
 
     .image-row img {
@@ -318,7 +325,7 @@ import Accordion from '../components/Accordion.astro';
     h1 {
         padding-top: 4.5rem;
         text-align: center;
-        color: rgb(48, 57, 98);
+        color: white;
     }
 
     .image-grid {
@@ -337,14 +344,14 @@ import Accordion from '../components/Accordion.astro';
         bottom: 0;
         left: 0;
         right: 0;
-        background-color: rgba(245, 245, 245, 0.8);
+        background-color: var(--bg-color-light);
         padding: 6px;
     }
 
     .image-text h3 {
         margin: 0 0 16px 0;
         font-size: 1.15rem;
-        color: rgb(63, 67, 77);
+        color: rgb(255, 255, 255);
         text-align: center;
     }
 

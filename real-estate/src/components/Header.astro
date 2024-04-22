@@ -7,11 +7,12 @@ import arrowDownMobile from '../assets/down-arrow.svg';
 type Props = {
   backgroundColor?: string;
   position?: string;
+  border?: string;
 };
 
-const { backgroundColor, position } = Astro.props as Props;
+const { backgroundColor, position, border } = Astro.props as Props;
 ---
-<header class="header" style={`background-color: ${backgroundColor}; position: ${position};`}>
+<header class="header" style={`background-color: ${backgroundColor}; position: ${position}; border-bottom: ${border}`}>
   <div class="logo">
     <a href="/">
       <div class="logo-container">
@@ -81,6 +82,11 @@ const { backgroundColor, position } = Astro.props as Props;
 </script>
 
 <style>    
+  :root {
+		--bg-color: #1c1c1c;
+		--bg-color-light: #3b3b3b;
+	}
+
   .header {
     position: fixed;
     top: 0;

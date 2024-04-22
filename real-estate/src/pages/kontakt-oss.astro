@@ -9,7 +9,7 @@ import phone from '../assets/phone.svg';
 ---
 
 <Layout title="NT Bolig - Kontakt oss">
-	<Header backgroundColor="rgba(52, 56, 65, 1)"/>
+	<Header backgroundColor="var(--bg-color-light)" border='none'/>
 	<main>
 		<section class="contact-section">
 			<h1>Kontakt oss</h1>
@@ -37,10 +37,14 @@ import phone from '../assets/phone.svg';
 </Layout>
 
 <style>
-	:global(body) {
-		background-color: whitesmoke;
+
+	:root {
+		--bg-color: #1c1c1c;
+		--bg-color-light: #3b3b3b;
 	}
+
 	main {
+		background-color: var(--bg-color);
 		font-size: 22px;
 		display: flex;
 		justify-content: center;
@@ -59,7 +63,8 @@ import phone from '../assets/phone.svg';
 	h1 {
 		font-size: 3rem;
 		font-weight: 700;
-		padding-top: 8px;
+		padding-top: 30px;
+		color: white;
 	}
 
 	.contact-info {
@@ -83,12 +88,12 @@ import phone from '../assets/phone.svg';
 
 	h2 {
 		font-size: 1.5rem;
-		color: #333;
+		color: white;
 	}
 
 	p, a {
 		font-size: 1.1rem;
-		color: #666;
+		color: white;
 		text-decoration: none;
 		transition: color 0.2s ease;
 	}

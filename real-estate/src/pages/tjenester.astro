@@ -13,7 +13,7 @@ import Accordion from '../components/Accordion.astro';
 ---
 
 <Layout title="NT Bolig - Kontakt oss">
-    <Header backgroundColor="rgba(52, 56, 65, 1)"/>
+    <Header backgroundColor="var(--bg-color-light)" border='1px solid rgb(148, 143, 143)'/>
     <main>
         <div class="wrapper">
             <div class="tjenester">
@@ -32,14 +32,14 @@ import Accordion from '../components/Accordion.astro';
               <h2 class="bistand">Fra råbygg til nøkkelferdig bygg</h2>
               <p class="bizzy">Fra en ide til et hjem, vi er med på hele reisen. Vi tilbyr tjenester med å forvandle råbygg til strøkne, nøkkelferdige bygg. </p>
             </div>
-            <div class="img-wrapper">
-                <Image src={placeholder} alt="Klopp holding the trophy" loading="eager" />
+            <div class="img-wrapper-1">
+                <Image src={placeholder} alt="" loading="eager" />
             </div>
         </div>
         <p></p>
         <div class="arkitekt">
-            <div class="img-wrapper">
-                <Image src={arkitekt} alt="Klopp holding the trophy" loading="eager" />
+            <div class="img-wrapper-2">
+                <Image src={arkitekt} alt="" loading="eager" />
             </div>
             <div class="inner-arkitekt">
               <h2 class="bistand">Arkitekt-bistand</h2>
@@ -52,8 +52,8 @@ import Accordion from '../components/Accordion.astro';
               <h2 class="bistand">Element bygg</h2>
               <p class="bizzy">Kun elementer, eller hele element bygg til prosjektene? Vi produserer og monterer alle typer bygg i elementer. Vegg, gulv, tak, balkong, trapp og andre behov. Se våre prosjekterte og produksjonsklare modeller, vi tilpasser også etter ønsket.</p>
             </div>
-            <div class="img-wrapper">
-                <Image src={element} alt="Klopp holding the trophy" loading="lazy" />
+            <div class="img-wrapper-3">
+                <Image src={element} alt="" loading="lazy" />
             </div>
         </div>
         <p></p>
@@ -67,7 +67,7 @@ import Accordion from '../components/Accordion.astro';
         <div class="image-wrapper">
             <div class="image-item">
                 <a href="/kjokken">
-                    <Image src={kjokken} alt="Klopp holding the trophy" loading="lazy" />
+                    <Image src={kjokken} alt="" loading="lazy" />
                     <div class="image-text">
                         <a href="/kjokken">
                             <button class="btn">Kjøkken</button>
@@ -77,7 +77,7 @@ import Accordion from '../components/Accordion.astro';
             </div>
             <div class="image-item">
                 <a href="/garderobe">
-                    <Image src={garderobe} alt="Klopp holding the trophy" loading="lazy" />
+                    <Image src={garderobe} alt="" loading="lazy" />
                     <div class="image-text">
                         <a href="/garderobe">
                             <button class="btn">Garderobe</button>
@@ -91,15 +91,18 @@ import Accordion from '../components/Accordion.astro';
 </Layout>
 
 <style>
-    :global(body) {
-        background-color: whitesmoke;
-    }
+
+    :root {
+		--bg-color: #1c1c1c;
+		--bg-color-light: #3b3b3b;
+	}
 
     main {
         font-size: 22px;
         font-family: 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
         padding: 40px;
         min-height: 100vh;
+        background-color: var(--bg-color);
     }
 
     .arkitekt {
@@ -107,11 +110,10 @@ import Accordion from '../components/Accordion.astro';
         flex-direction: row;
         align-items: center;
         justify-content: center;
-        background-color: rgb(236, 233, 233);
+        background-color: var(--bg-color-light);
         border-radius: 8px;
         width: 100%;
     }
-
 
     @media (max-width: 1070px) {
         .arkitekt {
@@ -124,8 +126,7 @@ import Accordion from '../components/Accordion.astro';
         .arkitekt img {
             order: 2;
             width: 500px !important;
-        }
-    
+        }    
     }
 
     @media (max-width: 615px) {
@@ -142,6 +143,15 @@ import Accordion from '../components/Accordion.astro';
         }
     }
 
+    .img-wrapper-1,
+    .img-wrapper-3 {
+		transform: skewX(-5deg);
+    }
+
+    .img-wrapper-2 {
+        transform: skewX(5deg);
+    }
+
 
     .arkitekt img {
         width: 100%;
@@ -150,7 +160,7 @@ import Accordion from '../components/Accordion.astro';
     }
 
     .bistand {
-        color: rgba(52, 56, 65, 1);
+        color: white;
         font-weight: 700;
     }
 
@@ -158,6 +168,7 @@ import Accordion from '../components/Accordion.astro';
         text-align: left;
         max-width: 600px;
         margin-left: 100px;
+        color: white;
     }
 
     .image-wrapper {
@@ -204,7 +215,7 @@ import Accordion from '../components/Accordion.astro';
         padding: 20px 20px 40px 20px;
         font-size: 20px;
         text-align: center;
-        color: rgba(52, 56, 65, 0.773);
+        color: white;
         max-width: 800px;
         margin: 0 auto;
         line-height: 1.6;
@@ -217,21 +228,21 @@ import Accordion from '../components/Accordion.astro';
 
     h2 {
         padding: 8px;
-        color: rgba(52, 56, 65, 1);
+        color: #6fa284;
         font-weight: 500;
         text-align: center;
     }
 
     h4 {
-        color: rgba(52, 56, 65, 1);
+        color: white;
         font-weight: 500;
         text-align: center;
     }
 
     .tjenester {
         display: flex;
-        background-color: rgb(66, 82, 118);
-        color: rgb(247, 244, 244);
+        background-color: #6fa284;
+        color: black;
         width: 700px;
         border-radius: 50px;
         padding: 8px;
@@ -256,6 +267,10 @@ import Accordion from '../components/Accordion.astro';
         .image-item {
             width: 350px;
             height: 200px;
+        }
+
+        .bizzy {
+            margin: 0;
         }
     }
 
@@ -300,12 +315,12 @@ import Accordion from '../components/Accordion.astro';
 		color: white;
 		font-size: 1.4rem;
 		cursor: pointer;
-		border-radius: 10px;
+		border-radius: 8px;
         width: 130px;
 	}
 
 	button:hover {
-		background: white;
+		background: #6fa284;
         color: black;
 	}
     

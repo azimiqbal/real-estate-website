@@ -48,6 +48,12 @@
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300&display=swap');
 
+
+  :root {
+		--bg-color: #1c1c1c;
+		--bg-color-light: #3b3b3b;
+	}
+
 body {
 /*  font-family: 'rubik', sans-serif;*/  
 } 
@@ -65,8 +71,9 @@ h1 {
 .accordion {
   margin: 90px auto;
   color: black;
-  background-color: rgb(236, 233, 233);
+  background-color: #6fa284;
   padding: 45px 45px;
+  border-radius: 12px;
 }
 
 @media (min-width: 1024px) {
@@ -77,10 +84,10 @@ h1 {
 }
 
 @media (max-width: 600px) {
-  .accordion {
-    padding: 20px 20px;
-    width: 100%;
-  }
+    .accordion {
+      padding: 20px;
+    }
+  
 }
 
 .accordion .container {
@@ -116,7 +123,7 @@ h1 {
 
 .accordion .content {
   position: relative;
-  background-color: rgb(236, 233, 233);
+  background-color: #6fa284;
   height: 0;
   font-size: 20px;
   text-align: left;
@@ -127,7 +134,7 @@ h1 {
 .accordion hr {
   width: 100%;
   margin-left: 0;
-  border: 1px solid grey;
+  border: 1px solid black;
 }
 
 .accordion .container.active .content {
