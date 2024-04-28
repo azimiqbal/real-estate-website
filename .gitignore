@@ -1,0 +1,8 @@
+# environment variables
+.env
+
+# macOS-specific files
+.DS_Store
+
+# vscode settings and dictionaries
+.vscode
