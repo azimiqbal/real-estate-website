@@ -1,15 +1,8 @@
 ---
 import { Image } from 'astro:assets';
-import huh from '../assets/huh.png';
 import arrowDown from '../assets/chevy.png';
 import arrowDownMobile from '../assets/down-arrow.svg';
-import goldIcon from '../assets/gold-icon.png';
-import kk from '../assets/kk.png';
-import hmmm from '../assets/hmmm.png';
-import aiit from '../assets/aiit.png';
-import jaja from '../assets/jaja.png';
-import nahh from '../assets/nahh.png';
-import whatIf from '../assets/whatIf.png';
+import nyLogo from '../assets/nyLogo.png';
 
 type Props = {
   backgroundColor?: string;
@@ -23,7 +16,7 @@ const { backgroundColor, position, border } = Astro.props as Props;
   <div class="logo">
     <a href="/">
       <div class="logo-container">
-        <Image src={whatIf} class="logos" alt="header logo" loading="eager"/>
+        <Image src={nyLogo} class="logos" alt="header logo" loading="eager"/>
         <span>NT Bolig</span>
       </div>
     </a>    
@@ -37,7 +30,7 @@ const { backgroundColor, position, border } = Astro.props as Props;
           <a href="/tjenester/">Våre tjenester</a>
           <Image src={arrowDown} class="arrow" alt="arrow down" loading="eager" />
           <div class="dropdown-content">
-              <a href="/huselementer">Huselementer</a>
+              <a href="/huselementer">Hus elementer</a>
               <a href="/kjokken/">Kjøkken</a>
               <a href="/garderobe/">Garderobe</a>
           </div>
