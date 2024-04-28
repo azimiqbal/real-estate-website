@@ -4,8 +4,9 @@ import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 import { Image } from 'astro:assets';
 import bre from '../assets/bre.jpg';
-import snaroya1 from '../assets/snaroya1.jpg';
-import snaroya4 from '../assets/snaroya4.jpg';
+import halden5 from '../assets/halden5.jpg';
+import eidsvoll from '../assets/eidvoldbror.jpeg';
+import document from '../assets/document.png';
 
 ---
 
@@ -14,7 +15,7 @@ import snaroya4 from '../assets/snaroya4.jpg';
     <main>
         <div class="container">
             <div class="image-container">
-				<img src={bre.src} class="darkened" alt="" loading="eager" style="background-color: whitesmoke;"/>
+				<Image src={bre} class="darkened" alt="" loading="eager" />
                 <div class="content-wrapper">
                         <h1 class="headline">Velkommen til NT Bolig</h1>
                         <h2>Eiendomsutvikling og eiendomstjenester</h2>
@@ -28,14 +29,14 @@ import snaroya4 from '../assets/snaroya4.jpg';
 			<h2 class="counters">Til dags dato</h2>
 			<div class="conteez-grid">
 				<div class="text-center animate">
-					<p class="font-bold">5</p>
+					<p class="font-bold">4</p>
 					<p class="font-semibold">Pågående</p>
 					<p class="text-2xl">prosjekter</p>
 				</div>
 				<div class="text-center animate">
-					<p class="font-bold">17</p>
+					<p class="font-bold">150</p>
 					<p class="font-semibold">Ulike</p>
-					<p class="text-2xl">Hus elementer solgt</p>
+					<p class="text-2xl">Hus elementer levert</p>
 				</div>
 				<div class="text-center animate">
 					<p class="font-bold">7</p>
@@ -43,12 +44,24 @@ import snaroya4 from '../assets/snaroya4.jpg';
 					<p class="text-2xl">gjennomført</p>
 				</div>
 				<div class="text-center animate">
-					<p class="font-bold">18+</p>
-					<p class="font-semibold">Avtaler</p>
-					<p class="text-2xl">Inngått</p>
+					<p class="font-bold">100+</p>
+					<p class="font-semibold">Fornøyde</p>
+					<p class="text-2xl">Kunder</p>
 				</div>
 			</div>
 		</div>
+		<div class="wrapper">
+            <div class="tjenester">
+                <h1>Tjenester</h1>
+                <ul>
+                    <li>Salg av elementhus</li>
+                    <li>Arkitektbistand</li>
+                    <li>Prosjekteringstjenester</li>
+                    <li>Bygge og prosjektledelse</li>
+                    <li>Montering, graving og elektrisk arbeid</li>
+                </ul>
+            </div>
+        </div>
 		<div class="target-section" id="target-section">
 			<div class="content">
 				<h4>NT Bolig</h4>
@@ -56,12 +69,12 @@ import snaroya4 from '../assets/snaroya4.jpg';
 					Vi er stolte av å være din pålitelige partner når det gjelder eiendomsutvikling. NT Bolig tilbyr skreddersydde løsninger for prosjekter av alle størrelser, fra småskala renoveringer til store boligutviklingsprosjekter. Med vår ekspertise, erfaring og lidenskap for kvalitetssikrede resultater, tar vi hånd om alle aspekter av eiendomsutvikling.</p>
 			</div>
 			<div class="column-image">
-				<Image src={snaroya1} class="imgy" alt="" loading="lazy" />
+				<Image src={eidsvoll} class="imgy" alt="" loading="eager" />
 			</div>
 		</div>
 		<div class="target-section">
 			<div class="column-image">
-				<Image src={snaroya4} class="imgy" alt="" loading="lazy" />
+				<Image src={halden5} class="imgy" alt="" loading="eager" />
 			</div>
 			<div class="content">
 				<h4>Våre tjenester</h4>
@@ -69,6 +82,12 @@ import snaroya4 from '../assets/snaroya4.jpg';
 				</p>
 			</div>
 		</div>
+		<div class="parent-butt">
+			<a href="/huselementer">
+				<button class="butt">Les mer</button>
+			</a>
+		</div> 
+	</div>
     </main>
     <Footer/>
     <script>
@@ -100,6 +119,56 @@ import snaroya4 from '../assets/snaroya4.jpg';
 		background-color: var(--bg-color);
 	}
 
+	.parent-butt {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		padding-bottom: 40px;
+	}
+
+	.butt {
+		justify-content: center;
+		align-items: center;
+		width: 175px;
+		border: 1px solid white;
+	}
+
+	.wrapper {
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        width: 100%;
+        padding-top: 100px;
+        padding-bottom: 50px;
+    }
+
+	.tjenester {
+        display: flex;
+        background-color: #c9944ad8;
+        color: black;
+        width: 700px;
+        border-radius: 50px;
+        padding: 14px;
+        margin: 8px;
+    }
+
+	@media (max-width: 500px) {
+        .wrapper {
+            padding-top: 50px;
+        }
+
+        .tjenester {
+            display: block;
+            width: 100%;
+            padding: 8px;
+        }
+	}
+
+	li {
+        font-size: 18px;
+        line-height: 30px;
+    }
+
 	.conteez {
 		margin: 0 auto;
 		max-width: 100%;
@@ -128,6 +197,7 @@ import snaroya4 from '../assets/snaroya4.jpg';
 		line-height: 1;
 		font-size: 3.75em;
 		text-align: center;
+		color: white;
 	}
 
 	.text-center {
@@ -135,7 +205,7 @@ import snaroya4 from '../assets/snaroya4.jpg';
 	}
 
 	.font-bold {
-		color: #6fa284;
+		color: white;
 		font-size: 3.75rem;
     	line-height: 0em;
 		font-weight: 700;
@@ -145,15 +215,16 @@ import snaroya4 from '../assets/snaroya4.jpg';
 		font-size: 2.25rem;
     	line-height: 0rem;
 		font-weight: 600;
-		color: #204035;
+		color: #cf994deb;
 	}
 
 	.text-2xl {
 		font-size: 1.5rem;
     	line-height: 0rem;	
+		color: white;
 	}
-	
 
+		
 	@media (min-width: 75em) {
 		.conteez {
 			padding: 0 1rem;
@@ -171,7 +242,7 @@ import snaroya4 from '../assets/snaroya4.jpg';
 	}
 
 	.darkened {
-		filter: brightness(0.7);
+		filter: brightness(0.5);
 		object-fit: cover;
 		width: 100%;
 		height: 100%;
@@ -201,6 +272,7 @@ import snaroya4 from '../assets/snaroya4.jpg';
 
 	h4 {
 		font-size: 1.3em;
+		color: #c9944aeb;
 	}
 
 	p {
@@ -218,13 +290,21 @@ import snaroya4 from '../assets/snaroya4.jpg';
 			width: 100%;
 		}
 
+		.content-wrapper {
+			top: 30%;
+		}
+
 	    h1 {
-	        font-size: 2em;
+	        font-size: 3em;
 	    }
 
 	    h2 {
-	        font-size: 1.1em;
+	        font-size: 1.5em;
 	    }
+
+		.wrapper h1 {
+			padding-top: 14px;
+		}
 	}
 
 	.button-container {
@@ -262,8 +342,7 @@ import snaroya4 from '../assets/snaroya4.jpg';
 	}
 
 	.content h4 {
-		color: #84bd9c;
-		font-size: 1.5em;
+		font-size: 1.7em;
 	}
 
 	.column-image {
@@ -278,7 +357,7 @@ import snaroya4 from '../assets/snaroya4.jpg';
 		top: 0;
 		width: 200%;
 		height: 100%;
-		background-color: #36614785;
+		background-color: #c9944adf;
 		transform: skewX(-10deg);
 	}
 

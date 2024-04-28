@@ -7,13 +7,12 @@ import kjokken from '../assets/kjokken-cover.jpg.webp';
 import garderobe from '../assets/garderobe-cover.webp';
 import arkitekt from '../assets/arkitekt.webp';
 import element from '../assets/element-bygg.jpeg';
-import placeholder from '../assets/placeholder.jpg';
-import Accordion from '../components/Accordion.astro';
+import newHouse3 from '../assets/newHouse3.jpeg';
 
 ---
 
 <Layout title="NT Bolig - Kontakt oss">
-    <Header backgroundColor="var(--bg-color-light)" border='1px solid rgb(148, 143, 143)'/>
+    <Header backgroundColor="var(--bg-color-light)" border='1px solid #727272'/>
     <main>
         <div class="wrapper">
             <div class="tjenester">
@@ -33,7 +32,7 @@ import Accordion from '../components/Accordion.astro';
               <p class="bizzy">Fra en ide til et hjem, vi er med på hele reisen. Vi tilbyr tjenester med å forvandle råbygg til strøkne, nøkkelferdige bygg. </p>
             </div>
             <div class="img-wrapper-1">
-                <Image src={placeholder} alt="" loading="eager" />
+                <Image src={newHouse3} alt="" loading="eager" />
             </div>
         </div>
         <p></p>
@@ -50,38 +49,31 @@ import Accordion from '../components/Accordion.astro';
         <div class="arkitekt">
             <div class="inner-arkitekt">
               <h2 class="bistand">Element bygg</h2>
-              <p class="bizzy">Kun elementer, eller hele element bygg til prosjektene? Vi produserer og monterer alle typer bygg i elementer. Vegg, gulv, tak, balkong, trapp og andre behov. Se våre prosjekterte og produksjonsklare modeller, vi tilpasser også etter ønsket.</p>
+              <p class="bizzy">Kun elementer, eller hele element bygg til prosjektene? Vi produserer og monterer alle typer bygg i elementer. Vegg, gulv, tak, balkong, trapp og andre behov.</p>
             </div>
             <div class="img-wrapper-3">
-                <Image src={element} alt="" loading="lazy" />
+                <Image src={element} alt="" loading="eager" />
             </div>
         </div>
         <p></p>
-        <div>
-            <Accordion/>
-        </div>
         <div>
             <h2>Kjøkken og garderobe</h2>
             <p>I tillegg til salg av huselementer, tilbyr vi også tilpassede løsninger innen kjøkken og garderobe. Vi skreddersyr kjøkken etter ditt behov og ditt hjem. Vi jobber sammen for å finne den fineste løsningen til ditt baderom. Les mer om dette</p>
         </div>
         <div class="image-wrapper">
             <div class="image-item">
-                <a href="/kjokken">
-                    <Image src={kjokken} alt="" loading="lazy" />
+                <a href="/garderobe">
+                    <Image src={kjokken} alt="" loading="eager" />
                     <div class="image-text">
-                        <a href="/kjokken">
-                            <button class="btn">Kjøkken</button>
-                        </a>
+                        <button class="btn">Kjøkken</button>
                     </div>
                 </a>
             </div>
             <div class="image-item">
                 <a href="/garderobe">
-                    <Image src={garderobe} alt="" loading="lazy" />
+                    <Image src={garderobe} alt="" loading="eager" />
                     <div class="image-text">
-                        <a href="/garderobe">
-                            <button class="btn">Garderobe</button>
-                        </a>                
+                        <button class="btn">Garderobe</button>
                     </div>
                 </a>
             </div>
@@ -160,7 +152,7 @@ import Accordion from '../components/Accordion.astro';
     }
 
     .bistand {
-        color: white;
+        color: #dfa555eb;
         font-weight: 700;
     }
 
@@ -228,7 +220,7 @@ import Accordion from '../components/Accordion.astro';
 
     h2 {
         padding: 8px;
-        color: #6fa284;
+        color: #dfa555eb;
         font-weight: 500;
         text-align: center;
     }
@@ -241,12 +233,19 @@ import Accordion from '../components/Accordion.astro';
 
     .tjenester {
         display: flex;
-        background-color: #6fa284;
+        background-color: #c9944aeb;
         color: black;
         width: 700px;
         border-radius: 50px;
         padding: 8px;
         margin: 8px;
+    }
+
+    .btn {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
     }
 
     @media (max-width: 900px) {
@@ -320,7 +319,7 @@ import Accordion from '../components/Accordion.astro';
 	}
 
 	button:hover {
-		background: #6fa284;
+		background: #c9944aeb;
         color: black;
 	}
     

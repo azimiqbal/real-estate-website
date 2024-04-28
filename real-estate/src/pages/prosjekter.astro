@@ -4,18 +4,16 @@ import Header from "../components/Header.astro";
 import Layout from "../layouts/Layout.astro";
 import { Image } from 'astro:assets';
 import prosjektPic from '../assets/prozzy.jpeg';
-import kjokken1 from '../assets/kjokken1.jpeg';
-import kjokken2 from '../assets/kjokken2.jpg';
-import kjokken3 from '../assets/kjokken3.jpg';
-import halden4 from '../assets/halden4.jpg';
 import contact from '../assets/H5.jpg';
+import bre from '../assets/bre.jpg';
+import newHouse3 from '../assets/newHouse3.jpeg';
 
 ---
 
 <Layout title="NT Bolig - Kontakt oss">
 	<Header position="absolute"/>
 	<main>
-        <img src={prosjektPic.src} class="logos" alt="" loading="eager" style="background-color: whitesmoke;" />
+        <Image src={prosjektPic} class="logos" alt="" loading="eager" />
         <div class="overlay-text">
             <h2>Prosjekter vi er stolte av</h2>
             <h4>Her viser vi til pågående prosjekter i NT Bolig</h4>
@@ -23,40 +21,27 @@ import contact from '../assets/H5.jpg';
         <h4 class="quality">Vi leverer kvalitet - gang på gang!</h4>
         <div class="intro-text">
             <p>
-                Noen utvalgte prosjekter innen minihus og element bygg. Levert til både kunder og egen regi. Vi leverer ifra oss kvalitet med stolthet, til rett tid. Alltid!
-                Her kan du lese om prosjekter vi jobber med per dags dato. Det er alt fra levering av huselementer, arkitekløsninger til graving og elektrisk arbeid vi bistår med i ulike pro
+                NT Bolig har god erfaring med alt innen eiendomsutvikling, og vårt team hjelper deg med å skreddersy din bolig til dine ønsker. Her ser du noen av våre ferdigstilte og pågående prosjekter, som kan gi deg inspirasjon til hva vi kan hjelpe deg med.
             </p>
         </div>
         <h3>Referanse prosjekter</h3>
         <div class="image-grid">
             <div class="image-item">
-                <Image src={kjokken1} alt="" loading="lazy" />
+                <Image src={bre} alt="" loading="eager" />
                 <div class="image-text">
-                    <h3>En klassisk stil men samtidig et særpreg. Kundens valg falt på vår populære laminat-type Dab Dublin.</h3>
+                    <h3>Flott og moderne enebolig</h3>
                 </div>
             </div>
             <div class="image-item">
-                <Image src={kjokken2} alt="" loading="lazy" />
+                <Image src={newHouse3} alt="" loading="eager" />
                 <div class="image-text">
-                    <h3>Resultatet ble et kjøkken med en unik farge som passet til resten av boligen. </h3>
-                </div>
-            </div>
-            <div class="image-item">
-                <Image src={kjokken3} alt="" loading="lazy" />
-                <div class="image-text">
-                    <h3>Lorem ipsum dolor sit amet</h3>
-                </div>
-            </div>
-            <div class="image-item">
-                <Image src={halden4} alt="" loading="lazy" />
-                <div class="image-text">
-                    <h3>Lorem ipsum dolor sit amet</h3>
+                    <h3>Enebolig på Eidvoll - en klassisk stil men samtidig et særpreg</h3>
                 </div>
             </div>
         </div>
         <div class="contact-us">
             <div class="contacting">
-                <Image src={contact} alt="contact us section" loading="lazy" />
+                <Image src={contact} alt="contact us section" loading="eager" />
             </div>
             <a href="/kontakt-oss">
                 <button>Kontakt oss for befaring</button>
@@ -85,7 +70,8 @@ import contact from '../assets/H5.jpg';
         display: flex;
         flex-direction: column;
         align-items: center;
-}
+        padding-top: 80px;
+    }
 
     .contacting {
         position: relative;
@@ -95,7 +81,7 @@ import contact from '../assets/H5.jpg';
 
     .contacting img {
         width: 100%;
-        height: 350px;
+        height: 250px;
         object-fit: cover;
         filter: brightness(0.4);
     }
@@ -104,7 +90,7 @@ import contact from '../assets/H5.jpg';
         font-size: 2em;
         text-align: center;
         font-weight: 700;
-        color: #3f836b;
+        color: white;
     }
 
     h4 {
@@ -115,7 +101,7 @@ import contact from '../assets/H5.jpg';
         text-align: center;
         font-size: 2em;
         font-weight: 500;
-        color: #3f836b;
+        color: white;
     }
 
 
@@ -144,6 +130,11 @@ import contact from '../assets/H5.jpg';
             width: 200px;
             font-size: 1rem;
         }
+    }
+
+    .image-grid .image-item {
+        height: 400px;
+        width: 650px;
     }
 
     .logos {
@@ -198,7 +189,6 @@ import contact from '../assets/H5.jpg';
         position: absolute;
         left: 0;
         right: 0;
-        background-color: #143d2f;
         padding: 4px;
     }
 

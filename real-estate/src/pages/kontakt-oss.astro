@@ -3,34 +3,42 @@ import Layout from '../layouts/Layout.astro';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 import { Image } from 'astro:assets';
-import email from '../assets/email.svg';
-import phone from '../assets/phone.svg';
+import halden1 from '../assets/halden1.jpg';
+import iph from '../assets/iph.png';
+import yy from '../assets/yy.png';
 
 ---
 
 <Layout title="NT Bolig - Kontakt oss">
 	<Header backgroundColor="var(--bg-color-light)" border='none'/>
 	<main>
+        <section class="intro-section">
+            <div class="intro-text">
+                <h1>Kontakt oss gjerne for en uforpliktende samtale</h1>
+				<p>Vi skreddersyr leveransen etter dine ønsker</p>
+            </div>
+            <div class="intro-image">
+                <Image src={halden1} alt="Snaroya" loading="eager"/>
+            </div>
+        </section>
 		<section class="contact-section">
-			<h1>Kontakt oss</h1>
-			<p>Har du noen spørsmål eller andre henvendelser? Terskelen er lav, vennligst ta kontakt med oss på mail eller telefon</p>
 			<div class="contact-info">
 				<div class="contact-info-item">
 					<h2>Email oss</h2>
 					<div class="contact-details">
-						<Image src={email} alt="Email Icon" class="icon" loading="eager"/>
+						<Image src={yy} alt="Email Icon" class="icon" loading="lazy"/>
 						<p><a href="mailto:someone@yoursite.com">natnaet@bluebirdgroup.no</a></p>
 					</div>
 				</div>
 				<div class="contact-info-item">
 					<h2>Ta kontakt på telefon</h2>
 					<div class="contact-details">
-						<Image src={phone} alt="Phone Icon" class="icon" loading="eager"/>
-						<p>+12345678</p>
+						<Image src={iph} alt="Phone Icon" class="icon" loading="lazy"/>
+						<p>+41377837</p>
 					</div>
 				</div>
 			</div>
-			<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1999.3383295159015!2d10.725348677399293!3d59.92652796307511!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46416dd80e69970f%3A0x6c4ccdc95f6d4c1a!2sPilestredet%2075C%2C%200354%20Oslo!5e0!3m2!1sno!2sno!4v1712447180052!5m2!1sno!2sno" width="400" height="300" style="border:0;" allowfullscreen="" loading="eager" referrerpolicy="no-referrer-when-downgrade"></iframe>
+			<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1999.3383295159015!2d10.725348677399293!3d59.92652796307511!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46416dd80e69970f%3A0x6c4ccdc95f6d4c1a!2sPilestredet%2075C%2C%200354%20Oslo!5e0!3m2!1sno!2sno!4v1712447180052!5m2!1sno!2sno" width="400" title="maps" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
 		</section>
 	</main>
    <Footer/>
@@ -46,18 +54,51 @@ import phone from '../assets/phone.svg';
 	main {
 		background-color: var(--bg-color);
 		font-size: 22px;
+		font-family: "El Messiri", Sans-serif;
+	}
+
+	.intro-section {
 		display: flex;
-		justify-content: center;
-		align-items: flex-start;
-		padding: 12px;
-		font-family:'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-		min-height: 100vh;
+		align-items: center;
+		text-align: center;
+	}
+
+	.intro-text, .intro-image {
+		width: 50%;
+	}
+
+	.intro-text h1 {
+		color: #C9944A;
+		font-family: "El Messiri", Sans-serif;
+	}
+
+	.intro-text p {
+		color: #7F7A77;
+	}
+
+	.intro-text {
+		padding-right: 10px;
+	}
+
+	.intro-image {
+		padding-left: 10px;
+	}
+
+	.intro-image img {
+		width: 100%;
+		max-height: 800px;
+		object-fit: cover;
 	}
 
 	.contact-section {
-		width: 700px;
-		max-width: calc(100% - 2rem);
-		margin: 1.8em 0 0 0;
+		margin: 1.8em auto 0 auto;
+		padding: 40px;
+	}
+
+	.contact-section h3 {
+		color: white;
+		text-align: center;
+		padding: 8px;
 	}
 
 	h1 {
@@ -69,10 +110,9 @@ import phone from '../assets/phone.svg';
 
 	.contact-info {
 		display: flex;
-	}
-
-	.contact-info-item {
-		width: calc(50% - 10px);
+		justify-content: center;
+		align-items: center;
+		gap: 60px;
 	}
 
 	.contact-details {
@@ -81,8 +121,8 @@ import phone from '../assets/phone.svg';
 	}
 
 	.icon {
-		width: 26px;
-		height: 26px;
+		width: 30px;
+		height: 30px;
 		margin-right: 8px;
 	}
 
@@ -103,10 +143,16 @@ import phone from '../assets/phone.svg';
 	}
 
 	iframe {
-		margin-top: 30px;
-		width: 100%;
-		border-radius: 10px;
+		display: flex;
+		width: 50%; /* Adjust as needed */
+		height: 50%; /* Adjust as needed */
+		min-width: 300px; /* Adjust as needed */
+		min-height: 300px; /* Adjust as needed */
+		margin: 0 auto; /* Centers the iframe */
+		padding-top: 20px;
 	}
+
+
 	
 	@media (max-width: 768px) {
 		.contact-info {
@@ -116,5 +162,40 @@ import phone from '../assets/phone.svg';
 		.contact-info-item {
 			width: 100%;
 		}
+
+		.intro-text h1 {
+			padding-top: 60px;
+			font-size: 1.7em;
+		}
+
+		.intro-image {
+			width: 100%;
+			min-width: 335px;
+		}
 	}
+
+	@media (max-width: 1024px) {
+    .intro-section {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+	.intro-text h1 {
+			padding-top: 60px;
+		}
+
+    .intro-image {
+        display: flex;
+        justify-content: center;
+		width: 70%;
+    }
+
+    .intro-image img {
+        width: 100%;
+        height: auto;
+    }
+}
+
 </style>

@@ -3,15 +3,9 @@ import Layout from '../layouts/Layout.astro';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 import { Image } from 'astro:assets';
-import snaroya2 from '../assets/snaroya2.jpg';
-import snaroya4 from '../assets/snaroya4.jpg';
-import snaroya5 from '../assets/snaroya5.jpg';
+import snaroya1 from '../assets/snaroya1.jpg';
 import halden1 from '../assets/halden1.jpg';
-import halden2 from '../assets/halden2.jpg';
-import halden3 from '../assets/halden3.jpg';
-import halden4 from '../assets/halden4.jpg';
 import halden5 from '../assets/halden5.jpg';
-import halden6 from '../assets/halden6.jpg';
 import vegg from '../assets/vgg.png';
 import takElement from '../assets/tak-element.png';
 import trap from '../assets/trap.png';
@@ -24,18 +18,25 @@ import bjelke from '../assets/bjelke.png';
 import balkong from '../assets/balkong.png';
 import elementsett from '../assets/elementsett.png';
 import Accordion from '../components/Accordion.astro';
+import newHouse2 from '../assets/newHouse2.jpeg';
+import newHouse3 from '../assets/newHouse3.jpeg';
+import newHouse6 from '../assets/newHouse6.jpeg';
+import newHouse7 from '../assets/newHouse7.jpeg';
+import newHouse8 from '../assets/newHouse8.jpeg';
+import bre from '../assets/bre.jpg';
+
 ---
 
 <Layout title="NT Bolig - Om oss">
 	<Header position="absolute"/>
     <main>
-        <img src={halden5.src} class="logos" alt="" loading="eager" style="background-color: whitesmoke;" />
+        <Image src={halden5} class="logos" alt="" loading="eager" />
         <h1 class="headline">Vi er med på hele reisen</h1>
         <Image src={reiser} class="rezzy" alt="" loading="eager" />
         <div class="info">
             <div class="square dark">
                 <div class="number">1</div>
-                <Image src={prosjektering} alt="" loading="lazy" />
+                <Image src={prosjektering} alt="" loading="eager" />
                 <div class="content">
                     <h2>Prosjektering</h2>
                     <p>Våre verktøy konstruerer våre/deres modeller automatisk i elementer</p>
@@ -43,7 +44,7 @@ import Accordion from '../components/Accordion.astro';
             </div>
             <div class="square light">
                 <div class="number">2</div>
-                <Image src={prod} alt="" loading="lazy" />
+                <Image src={prod} alt="" loading="eager" />
                 <div class="content">
                     <h2>Produksjon</h2>
                     <p>Vi ferdigstiller alle typer minihus og elementer i høyst mulig grad, før de pakkes inn tørre og klar til</p>
@@ -51,7 +52,7 @@ import Accordion from '../components/Accordion.astro';
             </div>
             <div class="square light">
                 <div class="number">3</div>
-                <Image src={transp} alt="" loading="lazy" />
+                <Image src={transp} alt="" loading="eager" />
                 <div class="content">
                     <h2>Transport</h2>
                     <p>Pakkede minihus og elementer heises på bil/båt, leveres prosjekter i hele Norge, til avtalt tid og sted. Vi har utstyret til både frakt og montasje. </p>
@@ -59,7 +60,7 @@ import Accordion from '../components/Accordion.astro';
             </div>
             <div class="square dark">
                 <div class="number">4</div>
-                <Image src={assembling} alt="" loading="lazy" />
+                <Image src={assembling} alt="" loading="eager" />
                 <div class="content">
                     <h2>Montasje</h2>
                     <p>Byggeplassen klargjøres parallelt med produksjon. Elementer heises og festes på treramme i ringmurene. Vipps så er bygget montert og tett.</p>
@@ -97,78 +98,78 @@ import Accordion from '../components/Accordion.astro';
                 <p>Elementsett</p>
             </div>
           </div>
-        <h1>Huselementer fra NT Bolig</h1>
+        <h1>Elementhus levert fra NT Bolig</h1>
         <div class="image-grid">
             <div class="image-item">
-                <a href={halden1.src}>
-                    <Image src={halden1} alt="" loading="lazy" />
+                <a href={halden1.src} aria-label="Image link to 2 flotte eneboliger på Snarøya">
+                    <Image src={halden1} alt="2 flotte eneboliger på Snarøya" loading="eager" />
                 </a>
                 <div class="image-text">
-                    <h3>Lorem ipsum dolor sit amet</h3>
+                    <h3>2 flotte eneboliger på Snarøya</h3>
                 </div>
             </div>
             <div class="image-item">
-                <a href={halden2.src}>
-                    <Image src={halden2} alt="" loading="lazy" />
+                <a href={halden5.src} aria-label="Image link to overblikk av eneboligene på Snarøya">
+                    <Image src={halden5} alt="" loading="eager" />
                 </a>
                 <div class="image-text">
-                    <h3>Lorem ipsum dolor sit amet</h3>
+                    <h3>Overblikk av eneboligene på Snarøya</h3>
                 </div>
             </div>
             <div class="image-item">
-                <a href={halden3.src}>
-                    <Image src={halden3} alt="" loading="lazy" />
+                <a href={bre.src} aria-label="Image link to 4 moderne eneboliger på Stovner">
+                    <Image src={bre} alt="" loading="eager" />
                 </a>
                 <div class="image-text">
-                    <h3>Lorem ipsum dolor sit amet</h3>
+                    <h3>4 moderne eneboliger på Stovner</h3>
                 </div>
             </div>
             <div class="image-item">
-                <a href={halden4.src}>
-                    <Image src={halden4} alt="" loading="lazy" />
+                <a href={newHouse2.src} aria-label="Image link to Endre rekkehus Slemmestad">
+                    <Image src={newHouse2} alt="" loading="eager" />
                 </a>
                 <div class="image-text">
-                    <h3>Lorem ipsum dolor sit amet</h3>
+                    <h3>Endre rekkehus Slemmestad</h3>
                 </div>
             </div>
             <div class="image-item">
-                <a href={halden5.src}>
-                    <Image src={halden5} alt="" loading="lazy" />
+                <a href={newHouse8.src} aria-label="Image link to 40 moderne rekkehus på Eidsvoll">
+                    <Image src={newHouse8} alt="" loading="eager" />
                 </a>
                 <div class="image-text">
-                    <h3>Lorem ipsum dolor sit amet</h3>
+                    <h3>40 moderne rekkehus på Eidsvoll</h3>
                 </div>
             </div>
             <div class="image-item">
-                <a href={halden6.src}>
-                    <Image src={halden6} alt="" loading="lazy" />
+                <a href={newHouse3.src} aria-label="Image link to Rekkehus på Eidsvoll">
+                    <Image src={newHouse3} alt="" loading="eager" />
                 </a>
                 <div class="image-text">
-                    <h3>Lorem ipsum dolor sit amet</h3>
+                    <h3>Rekkehus på Eidsvoll</h3>
                 </div>
             </div>
             <div class="image-item">
-                <a href={snaroya2.src}>
-                    <Image src={snaroya2} alt="" loading="lazy" />
+                <a href={newHouse6.src} aria-label="Image link to 2 arkitekttegnede eneboliger på Vinderen">
+                    <Image src={newHouse6} alt="" loading="eager" />
                 </a>
                 <div class="image-text">
-                    <h3>Lorem ipsum dolor sit amet</h3>
+                    <h3>2 arkitekttegnede eneboliger på Vinderen</h3>
                 </div>
             </div>
             <div class="image-item">
-                <a href={snaroya4.src}>
-                    <Image src={snaroya4} alt="" loading="lazy" />
+                <a href={snaroya1.src} aria-label="Image link to Enebolig på Vinderen">
+                    <Image src={snaroya1} alt="" loading="eager" />
                 </a>
                 <div class="image-text">
-                    <h3>Lorem ipsum dolor sit amet</h3>
+                    <h3>Enebolig på Vinderen</h3>
                 </div>
             </div>
             <div class="image-item">
-                <a href={snaroya5.src}>
-                    <Image src={snaroya5} alt="" loading="lazy" />
+                <a href={newHouse7.src} aria-label="Image link to 4 eneboliger på Asker">
+                    <Image src={newHouse7} alt="" loading="eager" />
                 </a>
                 <div class="image-text">
-                    <h3>Lorem ipsum dolor sit amet</h3>
+                    <h3>4 eneboliger på Asker</h3>
                 </div>
             </div>
         </div>
@@ -193,7 +194,7 @@ import Accordion from '../components/Accordion.astro';
     .headline {
         font-size: 3.2em;
         font-weight: 700;
-        color: #6fa284;
+        color: #dfa555eb;
     }
 
     .rezzy {
@@ -239,12 +240,12 @@ import Accordion from '../components/Accordion.astro';
     }
 
     .dark {
-        background-color: rgb(26, 23, 23);
+        background-color: rgb(49, 45, 45);
         color: white;
     }
 
     .light {
-        background-color: #6fa284;
+        background-color: #dfa555eb;
         color: black;
     }
 
@@ -293,6 +294,7 @@ import Accordion from '../components/Accordion.astro';
         justify-content: space-around;
         padding: 4px;
         color: white;
+        background-color: #3b3b3b;
     }    
 
     .image-row img {
@@ -339,6 +341,10 @@ import Accordion from '../components/Accordion.astro';
         padding-bottom: 50px;
     }
 
+    .image-grid .image-item {
+        height: 300px;
+    }
+
     .image-text {
         position: absolute;
         bottom: 0;
@@ -376,6 +382,10 @@ import Accordion from '../components/Accordion.astro';
     @media (max-width: 480px) {
         .image-grid {
             grid-template-columns: 1fr;
+        }
+
+        .overlay-text {
+            top: 35%;
         }
     }
 </style>
