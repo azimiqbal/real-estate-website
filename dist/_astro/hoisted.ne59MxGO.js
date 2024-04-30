@@ -1,0 +1,1 @@
+import"./hoisted.DvHeWgiy.js";document.addEventListener("DOMContentLoaded",()=>{document.querySelectorAll(".accordion .label").forEach(e=>{e.addEventListener("click",()=>{e.parentElement?.classList.toggle("active")})})});
