@@ -2,7 +2,7 @@
 import { Image } from 'astro:assets';
 import arrowDown from '../assets/chevy.png';
 import arrowDownMobile from '../assets/down-arrow.svg';
-import nyLogo from '../assets/nyLogo.png';
+import huh from '../assets/huh.png';
 
 type Props = {
   backgroundColor?: string;
@@ -16,7 +16,7 @@ const { backgroundColor, position, border } = Astro.props as Props;
   <div class="logo">
     <a href="/">
       <div class="logo-container">
-        <Image src={nyLogo} class="logos" alt="header logo" loading="eager"/>
+        <Image src={huh} class="logos" alt="header logo" loading="eager"/>
         <span>NT Bolig</span>
       </div>
     </a>    

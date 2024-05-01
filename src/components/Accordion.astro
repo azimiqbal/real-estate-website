@@ -4,7 +4,7 @@
       <hr>
       <div class="container">
         <div class="label">Kort byggetid</div>
-        <div class="content">Elementhus er prefabrikkerte, noe som betyr at de er bygget i fabrikker og deretter transportert til byggeplassen for montering. Dette reduserer byggetiden betydelig sammenlignet med tradisjonelle byggemetoder.</div>
+        <div class="content">Elementhus er prefabrikkerte, bygget i fabrikker og deretter transportert til byggeplassen for montering. Dette reduserer byggetiden sammenlignet med tradisjonelle byggemetoder.</div>
       </div>
       <hr>
       <div class="container">
@@ -26,17 +26,27 @@
 
     <script>
         document.addEventListener('DOMContentLoaded', () => {
-            let labels = document.querySelectorAll('.accordion .label');
+            const labels = document.querySelectorAll('.accordion .label');
             labels.forEach(label => {
                 label.addEventListener('click', () => {
                     const container = label.parentElement;
-                    container?.classList.toggle('active');
+                    if (!container) return; // Null check for the container
+
+                    const content = container.querySelector('.content');
+                    if (!(content instanceof HTMLElement)) return; // Type assertion and null check for content
+
+                    if (container.classList.contains('active')) {
+                        // Collapse the content
+                        content.style.maxHeight = '0';
+                    } else {
+                        // Expand the content
+                        content.style.maxHeight = `${content.scrollHeight}px`;
+                    }
+                    container.classList.toggle('active');
                 });
             });
-        });
-        
+        });    
     </script>
-    
 
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300&display=swap');
@@ -60,24 +70,36 @@ h1 {
 .accordion {
     margin: 20px auto;
     color: black;
-    background-color: #6f926ca6;
+    background-color: #8c7c67;
     padding: 10px 10px;
     border-radius: 12px;
 }
 
 @media (min-width: 1024px) {
   .accordion {
-    width: 40%;
+    width: 30%; /* Reducing width on desktop */
+    margin: 20px auto; /* Centering the accordion */
+    padding: 20px; /* Consistent padding */
+    background-color: #8c7c67; /* Background color */
+    border-radius: 12px; /* Rounded corners for aesthetics */
   }
-
 }
 
-@media (max-width: 600px) {
-    .accordion {
-      padding: 20px;
-    }
-  
+@media (min-width: 600px) and (max-width: 1023px) {
+  .accordion {
+    width: 50%;
+    padding: 20px;
+  }
 }
+
+@media (max-width: 599px) {
+  .accordion {
+    width: 80%;
+    padding: 20px;
+  }
+}
+
+
 
 .accordion .container {
   position: relative;
@@ -111,14 +133,16 @@ h1 {
 }
 
 .accordion .content {
-  position: relative;
-  background-color: #4b6d48a6;
-  height: 0;
-  font-size: 20px;
-  text-align: left;
+  max-height: 0;
   overflow: hidden;
-  transition: 0.5s;
+  transition: max-height 0.3s ease-in-out;
+  padding: 0 10px;
 }
+
+.accordion .container.active .content {
+  max-height: 500px;
+}
+
 
 .accordion hr {
   width: 100%;
