@@ -31,8 +31,13 @@ import bre from '../assets/bre.jpg';
 	<Header position="absolute"/>
     <main>
         <Image src={halden5} class="logos" alt="" loading="eager" />
+        <div class="wrapper">
+            <div class="tjenester">
+                <h1>Vi tilbyr alt innenfor elementhus</h1>
+                <span>Vi tilbyr alt innen prefabrikkert bygngselementer. Dette innebærer tjenester hvor vi inkluderer vegg, gulv og takelementer for hus, hytte og leilighetsbygg, i tillegg til fasadeelementer for leilighets og næringsbygg. Vi hjelper deg også med utvikling og prosjektering av prefabrikkerte konstruksjoner.</span>
+            </div>
+        </div>
         <h1 class="headline">Vi er med på hele reisen</h1>
-        <Image src={reiser} class="rezzy" alt="" loading="eager" />
         <div class="info">
             <div class="square dark">
                 <div class="number">1</div>
@@ -55,7 +60,7 @@ import bre from '../assets/bre.jpg';
                 <Image src={transp} alt="" loading="eager" />
                 <div class="content">
                     <h2>Transport</h2>
-                    <p>Pakkede minihus og elementer heises på bil/båt, leveres prosjekter i hele Norge, til avtalt tid og sted. Vi har utstyret til både frakt og montasje. </p>
+                    <p>Pakkede minihus og elementer heises på bil, leveres prosjekter i hele Norge, til avtalt tid og sted. Vi har utstyret til både frakt og montasje. </p>
                 </div>
             </div>
             <div class="square dark">
@@ -68,7 +73,7 @@ import bre from '../assets/bre.jpg';
             </div>
         </div>
         <div class="overlay-text">
-            <h2>Hus elementer</h2>
+            <h2>Elementhus</h2>
             <h4>Til store og små prosjekter - du kan regne med oss!</h4>
         </div>
         <h2 class="tit">Vi leverer alt fra A til Å</h2>
@@ -189,6 +194,30 @@ import bre from '../assets/bre.jpg';
     main {
         font-family: 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 		background-color: var(--bg-color);
+    }
+
+    span {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0 auto;
+        width: 800px;
+        font-size: 1.4em;
+        line-height: 2em;
+    }
+
+	.tjenester {
+        color: white;
+        border-radius: 50px;
+        padding: 14px;
+        margin: 8px;
+    }
+
+    .tjenester h1 {
+        font-size: 3em;
+        color: #b7a388;
+        text-align: center;
+        padding-right: 18px;
     }
 
     .headline {
