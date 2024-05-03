@@ -4,18 +4,13 @@
   "version": "0.0.1",
   "scripts": {
     "dev": "astro dev",
-    "start": "serve -s dist",
-    "build": "astro build",
+    "start": "astro dev",
+    "build": "astro check && astro build",
     "preview": "astro preview",
     "astro": "astro"
   },
   "dependencies": {
-    "@astrojs/check": "^0.5.9",
     "astro": "^4.5.5",
-    "serve": "^14.2.3",
     "typescript": "^5.4.2"
-  },
-  "devDependencies": {
-    "@types/babel__core": "^7.20.5"
   }
 }
