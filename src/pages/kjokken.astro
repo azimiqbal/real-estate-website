@@ -12,9 +12,12 @@ import newKitchen1 from '../assets/newKitchen1.jpeg';
 import newKitchen2 from '../assets/newKitchen2.jpeg';
 import newKitchen4 from '../assets/newKitchen4.jpeg';
 
+const pageTitle = "Tilpassede kjøkkenløsninger fra NT Bolig - skreddersy ditt drømmekjøkken"
+const pageDescription = "Utforsk NT Boligs eksklusive kjøkkenløsninger skreddersydd for hvert hjem. Fra design og funksjonalitet til installasjon, våre kjøkken er designet for å møte dine behov og forbedre livskvaliteten. Se våre referanseprosjekter og la deg inspirere!"
+
 ---
 
-<Layout title="NT Bolig - Kontakt oss">
+<Layout title={pageTitle} description={pageDescription}>
 	<Header position="absolute"/>
 	<main>
         <Image src={kjokken} class="logos" alt="header logo" loading="eager"/>

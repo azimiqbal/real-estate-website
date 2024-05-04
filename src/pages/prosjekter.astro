@@ -8,9 +8,11 @@ import contact from '../assets/H5.jpg';
 import bre from '../assets/bre.jpg';
 import newHouse3 from '../assets/newHouse3.jpeg';
 
+const pageTitle = "Utforsk våre prosjekter - NT Bolig | pågående og ferdigstilte byggeprosjekter";
+const pageDescription = "Se NT Boligs imponerende portefølje av pågående og ferdigstilte byggeprosjekter. Fra moderne eneboliger til nøkkelferdige løsninger, oppdag hvordan vi bringer innovasjon og kvalitet til hver eiendomsutvikling.";
 ---
 
-<Layout title="NT Bolig - Kontakt oss">
+<Layout title={pageTitle} description={pageDescription}>
 	<Header position="absolute"/>
 	<main>
         <Image src={prosjektPic} class="logos" alt="" loading="eager" />
