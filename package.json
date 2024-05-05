@@ -5,7 +5,7 @@
   "scripts": {
     "dev": "astro dev",
     "start": "astro dev",
-    "build": "npm run build",
+    "build": "astro build",
     "preview": "astro preview",
     "astro": "astro"
   },
@@ -14,4 +14,4 @@
     "astro": "^4.5.5",
     "typescript": "^5.4.5"
   }
-}
+} 
