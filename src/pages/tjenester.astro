@@ -6,7 +6,6 @@ import { Image } from 'astro:assets';
 import kjokken from '../assets/kjokken-cover.jpg.webp';
 import garderobe from '../assets/garderobe-cover.webp';
 import arkitekt from '../assets/arkitekt.webp';
-import element from '../assets/element-bygg.jpeg';
 import newHouse3 from '../assets/newHouse3.jpeg';
 
 const pageTitle = "Omfattende byggetjenester hos NT Bolig - fra prosjektering til nøkkelferdige løsninger"
@@ -29,12 +28,12 @@ const pageDescription = "Opplev spektret av byggetjenester med NT Bolig: Arkitek
             </div>
         </div>
         <div class="arkitekt">
+            <div class="img-wrapper-1">
+                <Image src={newHouse3} alt="" loading="eager" />
+            </div>
             <div class="inner-arkitekt">
               <h2 class="bistand">Fra råtomt til nøkkelferdig bygg</h2>
               <p class="bizzy">Fra en ide til et hjem, vi er med på hele reisen. Vi tilbyr tjenester med å forvandle råtomt til strøkne, nøkkelferdige bygg. </p>
-            </div>
-            <div class="img-wrapper-1">
-                <Image src={newHouse3} alt="" loading="eager" />
             </div>
         </div>
         <p></p>
@@ -48,15 +47,6 @@ const pageDescription = "Opplev spektret av byggetjenester med NT Bolig: Arkitek
             </div>
         </div>
         <p></p>
-        <div class="arkitekt">
-            <div class="inner-arkitekt">
-              <h2 class="bistand">Element bygg</h2>
-              <p class="bizzy">Kun elementer, eller hele element bygg til prosjektene? Vi produserer og monterer alle type bygg i elementer. Vegg, gulv, tak, balkong, trapp og andre behov.</p>
-            </div>
-            <div class="img-wrapper-3">
-                <Image src={element} alt="" loading="eager" />
-            </div>
-        </div>
         <p></p>
         <div>
             <h2>Kjøkken og garderobe</h2>
@@ -137,7 +127,6 @@ const pageDescription = "Opplev spektret av byggetjenester med NT Bolig: Arkitek
         }
     }
 
-    .img-wrapper-1,
     .img-wrapper-3 {
 		transform: skewX(-5deg);
     }
