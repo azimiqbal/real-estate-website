@@ -7,6 +7,13 @@ import prosjektPic from '../assets/prozzy.jpeg';
 import contact from '../assets/H5.jpg';
 import bre from '../assets/bre.jpg';
 import newHouse3 from '../assets/newHouse3.jpeg';
+import newHouse6 from '../assets/newHouse6.jpeg';
+import newHouse8 from '../assets/newHouse8.jpeg';
+import newy6 from '../assets/newy6.jpg';
+import newy7 from '../assets/newy7.jpg';
+import newy8 from '../assets/newy8.jpg';
+import newy9 from '../assets/newy9.jpg';
+import newy10 from '../assets/newy10.jpg';
 
 const pageTitle = "Utforsk våre prosjekter - NT Bolig | pågående og ferdigstilte byggeprosjekter";
 const pageDescription = "Se NT Boligs imponerende portefølje av pågående og ferdigstilte byggeprosjekter. Fra moderne eneboliger til nøkkelferdige løsninger, oppdag hvordan vi bringer innovasjon og kvalitet til hver eiendomsutvikling.";
@@ -29,6 +36,30 @@ const pageDescription = "Se NT Boligs imponerende portefølje av pågående og f
         <h3>Referanse prosjekter</h3>
         <div class="image-grid">
             <div class="image-item">
+                <a href={newy8.src} aria-label="Image link to 4 eneboliger på Asker">
+                    <Image src={newy8} alt="" loading="eager" />
+                </a>
+                <div class="image-text">
+                    <h3>2 arkitekttegnede eneboliger i Nittedal</h3>
+                </div>
+            </div>
+            <div class="image-item">
+                <a href={newy9.src} aria-label="Image link to 4 eneboliger på Asker">
+                    <Image src={newy9} alt="" loading="eager" />
+                </a>
+                <div class="image-text">
+                    <h3>2 arkitekttegnede eneboliger i Nittedal</h3>
+                </div>
+            </div>
+            <div class="image-item">
+                <a href={newy10.src} aria-label="Image link to 4 eneboliger på Asker">
+                    <Image src={newy10} alt="" loading="eager" />
+                </a>
+                <div class="image-text">
+                    <h3>2 arkitekttegnede eneboliger i Nittedal</h3>
+                </div>
+            </div>
+            <div class="image-item">
                 <Image src={bre} alt="" loading="eager" />
                 <div class="image-text">
                     <h3>4 moderne eneboliger</h3>
@@ -38,6 +69,34 @@ const pageDescription = "Se NT Boligs imponerende portefølje av pågående og f
                 <Image src={newHouse3} alt="" loading="eager" />
                 <div class="image-text">
                     <h3>40 moderne rekkehus i Eidsvoll</h3>
+                </div>
+            </div>
+            <div class="image-item">
+                <Image src={newHouse6} alt="" loading="eager" />
+                <div class="image-text">
+                    <h3>2 arkitekttegnede eneboliger på Vinderen</h3>
+                </div>
+            </div>
+            <div class="image-item">
+                <Image src={newHouse8} alt="" loading="eager" />
+                <div class="image-text">
+                    <h3>40 moderne rekkehus på Eidsvoll</h3>
+                </div>
+            </div>
+            <div class="image-item">
+                <a href={newy6.src} aria-label="Image link to 4 eneboliger på Asker">
+                    <Image src={newy6} alt="" loading="eager" />
+                </a>
+                <div class="image-text">
+                    <h3>2 tomannsbolig på Prinsdal</h3>
+                </div>
+            </div>
+            <div class="image-item">
+                <a href={newy7.src} aria-label="Image link to 4 eneboliger på Asker">
+                    <Image src={newy7} alt="" loading="eager" />
+                </a>
+                <div class="image-text">
+                    <h3>2 tomannsbolig på Prinsdal</h3>
                 </div>
             </div>
         </div>
@@ -178,13 +237,17 @@ const pageDescription = "Se NT Boligs imponerende portefølje av pågående og f
     .image-grid {
         display: grid;
         grid-gap: 20px;
-        padding: 80px;
+        padding: 40px;
     }
     
     .image-item {
         position: relative;
         overflow: hidden;
         padding-bottom: 50px;
+    }
+
+    .image-grid .image-item {
+        height: 300px;
     }
 
     .image-text {
@@ -213,31 +276,23 @@ const pageDescription = "Se NT Boligs imponerende portefølje av pågående og f
 
     @media (min-width: 1025px) {
         .image-grid {
-            grid-template-columns: repeat(2, 1fr);
-            padding: 0 0 30px 0;
-            margin: 0 auto;
-            width: 1250px;
-            height: auto;
-            border-radius: 8px;
+            grid-template-columns: repeat(3, 1fr);
         }
     }
 
     @media (max-width: 1024px) {
         .image-grid {
             grid-template-columns: repeat(2, 1fr);
-            padding: 30px;
         }
     }
     @media (max-width: 480px) {
         .image-grid {
             grid-template-columns: 1fr;
-            padding: 30px;
         }
 
         .overlay-text {
-            top: 10%;
+            top: 35%;
         }
-
     }
 
 </style>
