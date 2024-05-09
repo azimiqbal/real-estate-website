@@ -53,12 +53,22 @@ const pageDescription = "Oppdag NT Boligs innovative tilnærming til bygging av 
 				</div>
 			</div>
 		</div>
+		<div class="wrapper">
+            <div class="tjenester">
+                <h1>Tjenester</h1>
+                <ul>
+                    <li>Salg av elementhus</li>
+                    <li>Arkitektbistand</li>
+                    <li>Prosjekteringstjenester</li>
+                    <li>Bygge og prosjektledelse</li>
+                </ul>
+            </div>
+        </div>
 		<div class="target-section" id="target-section">
 			<div class="content">
 				<h4>NT Bolig</h4>
 				<p>
-					NT bolig fokuserer på å skape verdier gjennom eiendomsutvikling, hvor vi tar prosjekter fra konsept til realisering gjennom grundig planlegging, nyskapende design og effektiv gjennomføring. Hvis du eier en tomt og ønsker å utvikle den, men står overfor begrensninger som tid, kompetanse eller kapital. Sammen kan vi skape verdier på en enkel og svært lønnsom måte.
-				</p>
+					Vi er stolte av å være din pålitelige partner når det gjelder eiendomsutvikling. NT Bolig tilbyr skreddersydde løsninger for prosjekter av alle størrelser, fra småskala renoveringer til store boligutviklingsprosjekter. Med vår ekspertise, erfaring og lidenskap for kvalitetssikrede resultater - tar vi hånd om alle aspekter av eiendomsutvikling.</p>
 			</div>
 			<div class="column-image">
 				<Image src={eidsvoll} class="imgy" alt="" loading="eager" />
@@ -70,8 +80,7 @@ const pageDescription = "Oppdag NT Boligs innovative tilnærming til bygging av 
 			</div>
 			<div class="content">
 				<h4>Våre tjenester</h4>
-				<p>
-					NT bolig tilbyr helhetlige tjenester innen eiendoms- og prosjektutvikling, inkludert arkitektbistand, ingeniørtjenester, byggesøknader, byggeledelse, produksjon og leveranse av trebaserte prefabrikkerte bygningselementer. Med et sterkt fokus på effektivitet og kostnadsbesparelser har vi levert mange vellykkede prosjekter og etablert oss som en pålitelig partner i bransjen
+				<p>NT Bolig tilbyr tilpassede løsninger for eiendomsutvikling som passer dine behov og ønsker. Fra det øyeblikket du kontakter oss, tar vi deg med på en spennende reise fra idé til virkelighet. Enten du bygger et nytt hjem eller pusser opp, tilbyr vi et omfattende utvalg av høykvalitets elementhus. La vårt dedikerte team av fagfolk ta hånd om ditt eiendomsutviklingsprosjekt. Vi er her for å sikre at ditt prosjekt når sitt fulle potensiale.
 				</p>
 			</div>
 		</div>
@@ -126,7 +135,39 @@ const pageDescription = "Oppdag NT Boligs innovative tilnærming til bygging av 
 		border: 1px solid white;
 	}
 
+	.wrapper {
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        width: 100%;
+        padding-top: 100px;
+        padding-bottom: 50px;
+    }
+
+	.tjenester {
+        display: flex;
+        background-color: #b7a388;
+        color: black;
+        width: 700px;
+        border-radius: 50px;
+        padding: 14px;
+        margin: 8px;
+    }
+
 	@media (max-width: 500px) {
+        .wrapper {
+            padding-top: 50px;
+        }
+
+        .tjenester {
+            display: block;
+            width: 100%;
+            padding: 10px;
+        }
+
+		.tjenester h1 {
+			padding-left: 40px;
+		}
 
 		.column-image {
 			padding: 0;
