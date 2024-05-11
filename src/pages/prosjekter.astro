@@ -3,7 +3,6 @@ import Footer from "../components/Footer.astro";
 import Header from "../components/Header.astro";
 import Layout from "../layouts/Layout.astro";
 import { Image } from 'astro:assets';
-import prosjektPic from '../assets/prozzy.jpeg';
 import contact from '../assets/H5.jpg';
 import bre from '../assets/bre.jpg';
 import newHouse3 from '../assets/newHouse3.jpeg';
@@ -22,7 +21,7 @@ const pageDescription = "Se NT Boligs imponerende portefølje av pågående og f
 <Layout title={pageTitle} description={pageDescription}>
 	<Header position="absolute"/>
 	<main>
-        <Image src={prosjektPic} class="logos" alt="" loading="eager" />
+        <Image src={newy6} class="logos" alt="" loading="eager" />
         <div class="overlay-text">
             <h2>Prosjekter</h2>
             <h4>Pågående prosjekter i NT Bolig</h4>
@@ -231,7 +230,7 @@ const pageDescription = "Se NT Boligs imponerende portefølje av pågående og f
         }
 
         .overlay-text {
-            top: 8%;
+            top: 6%;
         }
     }
 
