@@ -2,6 +2,7 @@
 import { Image } from 'astro:assets';
 import huh from '../assets/huh.png';
 import yy from '../assets/yy.png';
+import pin from '../assets/pin.png';
 ---
 
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -13,15 +14,19 @@ import yy from '../assets/yy.png';
 <body>
 <footer>
     <div class="footer">
-        <div class="row">
-            <a href="/">
-                <Image src={huh} class="logos" alt="header logo" loading="eager"/>
-            </a>
-        <div class="info">
-            <Image src={yy} alt="Email Icon" class="icon" loading="lazy"/>
-            <a class="mail" href="mailto:Natnael@bluebirdgroup.no">Natnael@bluebirdgroup.no</a>
-            <span>(933269698)</span>
+        <span>Du finner oss her</span>
+        <hr class="divider" />
+        <div class="box">
+            <div class="roddy">
+                <Image src={pin} alt="Address Icon" class="piny" loading="lazy"/>
+                <p class="addy">Pilestredet 75C, 0354 Oslo</p>
+            </div>
+            <div class="roddy">
+                <Image src={yy} alt="Email Icon" class="icony" loading="lazy"/>
+                <a class="mail" href="mailto:Natnael@bluebirdgroup.no">Natnael@bluebirdgroup.no</a>
+            </div>
         </div>
+        <div class="row">
         <div class="row">
             <ul>
                 <li><a href="/elementhus/">Elementhus</a></li>
@@ -47,34 +52,101 @@ import yy from '../assets/yy.png';
         box-sizing: border-box;
     }
 
+    p {
+        color: white;
+    }
+
     .footer {
         background: black;
-        padding: 30px 0px;
+        padding: 50px 0px;
         font-family: 'Play', sans-serif;
         text-align: center;
+    }
+
+    .icony {
+        height: 25px;
+        width: 35px;
+        display: flex;
+        margin: 6px auto;
+    }
+
+    .piny {
+        height: 30px;
+        width: 35px;
+        margin: 0 auto;
+    }
+
+    .box {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding-top: 16px;
+    }
+
+    @media (max-width: 890px) {
+        .box {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .roddy {
+            width: 70% !important;
+        }
+    }
+
+    .roddy {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 30%;
+        height: 150px;
+        border: 1px solid #b7a388;
+        margin: 10px;
+        border-radius: 8px;
+    }
+
+    .divider {
+        border: none;
+        border-top: 1px dotted #b7a388;
+        width: 30%;
+        margin: 10px auto;
     }
 
     .icon {
         height: 19px;
         width: 25px;
-        margin: 6px;
     }
 
-    .info {
+    .roddy p {
         display: flex;
         justify-content: center;
         align-items: center;
-        padding: 6px;
+    }
+
+    .addy,
+    .mail {
+        font-size: 1.1em !important;
     }
 
     span {
         margin: 6px;
+        color: white;
+        font-size: 3em;
+        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     }
 
     .mail {
         color: white !important;
         font-size: 1.2em;
+        word-wrap: break-word;
+        text-decoration: none;
+        padding-bottom: 12px;
+        margin: 8px;
     }
+
+
 
     .logos {
       height: 60px;
