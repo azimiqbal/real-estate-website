@@ -30,7 +30,6 @@ const { backgroundColor, position, border } = Astro.props as Props;
           <a href="/tjenester/">Våre tjenester</a>
           <Image src={arrowDown} class="arrow" alt="arrow down" loading="eager" />
           <div class="dropdown-content">
-              <a href="/elementhus">Elementhus</a>
               <a href="/kjokken/">Kjøkken</a>
               <a href="/garderobe/">Garderobe</a>
           </div>
@@ -52,7 +51,6 @@ const { backgroundColor, position, border } = Astro.props as Props;
         <a href="/tjenester/">Våre tjenester</a>
         <Image src={arrowDownMobile} class="arrow-mobile" alt="arrow down" loading="eager" />
         <ul class="submenu">
-          <li><a href="/elementhus/">Elementhus</a></li>
           <li><a href="/kjokken/">Kjøkken</a></li>
           <li><a href="/garderobe/">Garderobe</a></li>
         </ul>
@@ -114,6 +112,7 @@ const { backgroundColor, position, border } = Astro.props as Props;
     background-color: var(--bg-color-light);
     border-radius: 6px;
     text-align: center;
+    transition: all 0.5s ease;
   }
 
   .dropdown:hover .dropdown-content {
@@ -149,7 +148,6 @@ const { backgroundColor, position, border } = Astro.props as Props;
   .submenu.active li:nth-child(2),
   .submenu.active li:last-child {
     border-bottom: none;
-    font-weight: 600;
   }
 
   .arrow-mobile.rotated {
